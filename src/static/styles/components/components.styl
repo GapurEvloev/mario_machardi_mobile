@@ -1,0 +1,104 @@
+.fade
+  transition opacity 0.15s linear
+
+  &:not(.show)
+    opacity 0
+
+.collapse
+  &:not(.show)
+    display none
+
+.collapsing
+  height 0
+  overflow hidden
+  position relative
+  transition height 0.35s ease
+
+// .follow
+//   display flex
+//   list-style none
+//   margin-bottom 0
+//   padding-left 0
+
+//   .header &
+//     justify-content center
+
+//   &__item
+//     + .follow__item
+//       margin-left 20px
+
+//       @media (min-width: $grid-md)
+//         margin-left 2em
+
+//   &__link
+//     align-items center
+//     border 1px solid #AAB0C0
+//     border-radius 50%
+//     color #AAB0C0
+//     display flex
+//     flex-shrink 0
+//     font-size 16px
+//     font-weight 300
+//     height 40px
+//     justify-content center
+//     width 40px
+
+//     @media (min-width: $grid-lg)
+//       border-width 0.1rem
+//       font-size 1.3rem
+//       height 3.3rem
+//       width 3.3rem
+
+//     &:hover
+//       background-color rgba(255, 255, 255, 0.1)
+//       border-color #fff
+//       box-shadow 0 0 15px rgba(0, 0, 0, 0.35)
+//       color #fff
+
+// .owl-nav
+//   button.owl-prev,
+//   button.owl-next
+//     height 22px
+//     position absolute
+//     top 50%
+//     transform translateY(-50%)
+//     user-select none
+//     width 13px
+    
+//     &.disabled
+//       cursor default
+//       opacity 0.25
+//       pointer-events none
+
+//       &:focus
+//         box-shadow none
+//         outline none
+    
+//     svg
+//       vertical-align top
+
+// .section
+//   padding-top 28px
+//   padding-bottom 28px
+//   position relative
+
+//   @media (min-width: $grid-md)
+//     padding-top 2.5rem
+//     padding-bottom 3rem
+  
+//   > .container
+//     position relative
+
+// .link-more
+//   align-items center
+//   display inline-flex
+//   font-weight 700
+
+// .table
+//   background-color transparent
+//   max-width 100%
+//   width 100%
+
+//   thead
+//     th
+//       vertical-align bottom

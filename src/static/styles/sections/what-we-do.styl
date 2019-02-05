@@ -1,0 +1,109 @@
+.whatwedo-title
+  color #35353d
+  font-size 14px
+  font-weight 700
+  margin-bottom 20px
+  text-align center
+  text-transform uppercase
+
+  @media (min-width: $grid-md)
+    margin-bottom 50px
+
+  span
+    border-bottom 2px solid $blue
+    display inline-block
+    padding-bottom 5px
+    vertical-align top
+
+    @media (min-width: $grid-md)
+      border-bottom-width 4px
+
+.whatwedo-text
+  @extend .section-text
+  text-align center
+
+  @media (min-width: $grid-md)
+    margin-left auto
+    margin-right auto
+    width 520px
+  
+  @media (min-width: $grid-xl)
+    width 710px
+
+.whatwedo-slider
+  height 62px
+  margin-top 20px
+  margin-left auto
+  margin-right auto
+  width 270px
+
+  @media (min-width: $grid-md)
+    margin-top 2.5rem
+    width 580px
+
+  @media (min-width: $grid-xl)
+    height 90px
+    width 975px
+
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item
+    height 100%
+  
+  .owl-item
+    align-items center
+    display flex
+    justify-content center
+    padding 5px 10px
+
+    @media (min-width: $grid-md)
+      padding-left 15px
+      padding-right 15px
+
+    @media (min-width: $grid-xl)
+      padding-left 25px
+      padding-right 25px
+
+    a
+      align-items center
+      display flex
+      height 100%
+      justify-content center
+      width 100%
+
+      &:hover
+        img
+          filter grayscale(0)
+
+    img
+      backface-visibility hidden
+      filter grayscale(1)
+      height auto
+      max-height 100%
+      max-width 110px
+      object-fit contain
+      font-family 'object-fit: contain;'
+      transform translate3d(0, 0, 0)
+      transition filter 0.35s ease-in-out
+
+      @media (min-width: $grid-xl)
+        max-width 145px
+  
+  .owl-nav
+    button.owl-prev
+      left -30px
+
+      @media (min-width: $grid-md)
+        left -40px
+
+      @media (min-width: $grid-xxl)
+        left -130px
+    
+    button.owl-next
+      right -30px
+
+      @media (min-width: $grid-md)
+        right -40px
+
+      @media (min-width: $grid-xxl)
+        right -130px

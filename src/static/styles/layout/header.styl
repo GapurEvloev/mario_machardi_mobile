@@ -1,0 +1,257 @@
+.header
+	color $black
+	z-index 1000
+
+.navbar-header
+	align-items center
+	display flex
+	justify-content space-between
+	height 100px
+	position relative
+
+.navbar-logo
+
+	img
+		height 75px
+		width 105px
+
+.navbar-brand
+	left 50%
+	position absolute
+	top 50%
+	transform translate(-50%, -50%)
+
+	img
+		height 16px
+		width 90px
+
+.navbar-toggler
+	background transparent
+	border 0
+	cursor pointer
+	display block
+	height 35px
+	padding 0
+	position relative
+	width 32px
+	margin-left 10px
+	margin-right 10px
+
+	&:hover,
+	&:focus
+		text-decoration none
+
+.navbar-toggler-bar
+	background-color $black
+	height 3px
+	left 0px
+	position absolute
+	width 20px
+
+	&:nth-child(1)
+		top 2px
+	
+	&:nth-child(2)
+		top 8px
+	
+	&:nth-child(3)
+		top 14px
+
+.navbar-search
+	position relative
+	margin-left: calc(var(--grid-gutter-width) / -2)
+	margin-right: calc(var(--grid-gutter-width) / -2)
+	overflow: hidden;
+
+	&:before
+		content ''
+		position: absolute
+		width 200%
+		top 0
+		border-top: 1px solid $gray-100
+		transition none
+		left -50%
+	&-form
+		height 78px
+		width 100%
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content center
+		position relative
+		padding-left: 25px;
+		padding-right: 25px;
+
+	&-input
+		border: 1px solid $gray-100
+		border-radius 2px
+		width 100%
+		max-height 40px
+		background-color: $formFill
+		padding 9px 18px
+		font-size 1rem
+		
+	&-icon
+		position: absolute
+		right 40px
+
+	&-button
+		background-color: #ccc
+.navbar-collapse
+	background-color #fff
+	position relative
+
+
+.navbar-collapse-inner
+	padding: 17.5px	0
+	
+
+.nav-menu
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content space-between
+	list-style none
+	margin-bottom 0
+	padding-left 0
+	margin-bottom 35px
+
+.nav-item
+	letter-spacing 0.02em
+	&.has-sub-menu.active
+		padding-bottom 10px
+		position: relative
+		&:after
+			background-color: #fff;
+			border: 2px solid $black;
+			border-bottom: none;
+			border-left: none;
+			bottom: -11px;
+			content: '';
+			height: 10px;
+			left: calc(50% - 10px);
+			position: absolute;
+			-webkit-transform-origin: top left;
+			-ms-transform-origin: top left;
+			-o-transform-origin: top left;
+			transform-origin: top left;
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			width: 10px;
+			top 30px
+			z-index: 1;
+
+.nav-link
+	color $black
+	font-size 12px
+	text-transform: uppercase
+
+.nav-sub-menu
+	list-style none
+	margin-bottom 0
+	padding-left 0
+	padding-bottom 15px
+	
+	&-wrapper
+		border-top: 1px solid #f0f0f0;
+
+.nav-sub-item
+	@media (min-width: $grid-md)
+		padding-top 8px
+		padding-bottom 8px
+
+	+ .nav-sub-item
+		.nav-sub-link
+			@media (max-width: $grid-sm-max)
+				padding-top 9px
+
+.nav-sub-link
+	display block
+
+	@media (max-width: $grid-sm-max)
+		color alpha(#fff, 0.8)
+		font-size 17px
+		font-weight 300
+		padding 0 5px 9px
+
+		&:hover
+			color #fff
+	
+	@media (min-width: $grid-md)
+		color #fff
+		font-size 14px
+		font-weight 500
+		line-height 1.08
+		text-transform uppercase
+
+		&:hover
+			color #fff
+			text-decoration underline
+
+.navbar-lang
+	font-size 0.9rem
+	font-weight 500
+	position absolute
+	right 0
+	top 50%
+	transform translateY(-50%)
+
+	&__toggler
+		align-items center
+		color #fff
+		display flex
+		position relative
+
+		.icon-dropdown-arrow
+			fill #fff
+			height 6px
+			margin-left 8px
+			transition fill 0.15s ease-in-out
+			width 9px
+
+	&__list
+		left 0
+		opacity 0
+		padding-top 0.2rem
+		padding-bottom 0.2rem
+		position absolute
+		right 0
+		top 100%
+		transition all 0.25s ease-in-out
+		transform translateY(2px)
+		visibility hidden
+	
+	&__item
+		color #fff
+		display block
+	
+	&:hover
+		.navbar-lang__toggler
+			color $linkHoverColor
+
+			.icon-dropdown-arrow
+				fill $linkHoverColor
+
+		.navbar-lang__list
+			opacity 1
+			transform translateY(0)
+			visibility visible
+
+	&:focus-within
+		.navbar-lang__toggler
+			color $linkHoverColor
+
+			.icon-dropdown-arrow
+				fill $linkHoverColor
+
+		.navbar-lang__list
+			opacity 1
+			transform translateY(0)
+			visibility visible

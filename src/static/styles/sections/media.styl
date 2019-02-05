@@ -1,0 +1,64 @@
+.media-list
+  @media (max-width: $grid-sm-max)
+    margin-left auto
+    margin-right auto
+    width 270px
+  
+  @media (min-width: $grid-md)
+    align-items flex-start
+    display flex
+    flex-wrap wrap
+    margin-top -40px
+    margin-left -10px
+
+  @media (min-width: $grid-xl)
+    margin-top -60px
+  
+  @media (min-width: $grid-xxl)
+    margin-top -90px
+
+  .owl-nav
+    button.owl-prev
+      left -32px
+    
+    button.owl-next
+      right -32px
+
+.media-item
+  @media (max-width: $grid-sm-max)
+    display none
+    text-align center
+
+    .owl-loaded .owl-item &
+      display block
+
+  @media (min-width: $grid-md)
+    margin-top 40px
+    margin-left 10px
+    padding-right 40px
+    width calc(100%/3 - 10.02px)
+
+  @media (min-width: $grid-xl)
+    margin-top 60px
+
+  @media (min-width: $grid-xxl)
+    margin-top 90px
+
+  &__logo
+    margin-bottom 10px
+
+    @media (min-width: $grid-md)
+      margin-bottom 22px
+
+  &__text
+    font-size 1rem
+    font-weight 300
+    line-height 1.3
+
+    @media (min-width: $grid-md)
+      font-size 0.85rem
+      letter-spacing 0.025em
+      line-height 1.4
+
+    @media (min-width: $grid-lg)
+      font-size 1rem

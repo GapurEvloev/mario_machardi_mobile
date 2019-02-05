@@ -1,0 +1,111 @@
+.page-footer
+  align-items center
+  color #fff
+  display flex
+  flex-direction column
+  justify-content center
+  margin-top 46px
+  min-height round(440*100/1920, 2)vw
+  padding-top 3.5rem
+  padding-bottom 5rem
+  position relative
+  text-align center
+  z-index 1
+
+  &--demo
+    .page-footer-background
+      background-color transparent
+      background-image linear-gradient(60deg, #611959, $darkBlue 60%)
+      background-repeat repeat-x
+    
+    .page-footer-lead
+      @media (min-width: $grid-md)
+        letter-spacing 0.1em
+  
+  &--tech
+    .page-footer-background
+      background-color transparent
+      background-image linear-gradient(60deg, #611959, $darkBlue 60%)
+      background-repeat repeat-x
+
+    .page-footer-title
+      font-size 2rem
+      margin-bottom 0.5em
+
+      @media (min-width: $grid-md)
+        font-size 2.5rem
+
+      @media (min-width: $grid-lg)
+        font-size 3rem
+    
+    .page-footer-lead
+      @media (min-width: $grid-md)
+        line-height 1.5
+        width 45%
+
+.page-footer-background
+  background-color $darkBlue
+  bottom 20px
+  clip-path 'polygon(0 0, 100% 0, 100% calc(100% - %s), 0 100%)' % (round(16*100/375, 3))vw
+  left 0
+  overflow hidden
+  position absolute
+  right 0
+  top 0
+  z-index -1
+
+  @media (min-width: $grid-md)
+    bottom 10px
+    clip-path 'polygon(0 0, 100% 0, 100% calc(100% - %s), 0 100%)' % (round(70*100/1920, 3))vw
+
+.page-footer-title
+  color $primary
+  font-size 2.4rem
+  font-weight 900
+  letter-spacing 0.02em
+  text-transform uppercase
+  line-height 1
+  margin-bottom 0.2em
+
+  @media (min-width: $grid-md)
+    font-size 4.5rem
+    letter-spacing -0.015em
+    line-height 0.58
+  
+  @media (min-width: $grid-lg)
+    font-size 5.275rem
+
+  strong
+    color #fff
+    font-weight 900
+
+.page-footer-subtitle
+  color $primary
+  font-size 1rem
+  font-weight 700
+  letter-spacing 0.02em
+  margin-bottom 1.15em
+  text-transform uppercase
+
+  @media (min-width: $grid-md)
+    font-size 1.5rem
+    letter-spacing -0.005em
+    margin-bottom 0.75em
+
+.page-footer-lead
+  font-weight 300
+  line-height 1.3
+  margin-bottom 1.1rem
+
+  @media (min-width: $grid-md)
+    line-height 1.2
+    margin-left auto
+    margin-right auto
+    width 65%
+
+.page-footer-button
+  bottom 0.35rem
+  left 0
+  position absolute
+  right 0
+  z-index 1
