@@ -1,0 +1,26 @@
+.global-blocks-title
+  font-size 20px
+  font-weight 700
+  line-height 28px
+  position relative
+  text-align center
+
+  &_text
+    background-color white
+    display inline-block
+    padding 0 10px
+    position relative
+    width 170px
+    z-index 1
+
+  &:after
+    background-color $gray-100
+    bottom 0
+    content ''
+    height 1px
+    left 0
+    margin auto 0
+    position absolute
+    top 0
+    width 100%
+    // transform translateX(-50%)

@@ -1,0 +1,37 @@
+mixin wholesale-buyers()
+  // Оптовым покупателям
+  .wholesale-buyers
+    .wholesale-buyers__title.global-blocks-title
+      span.global-blocks-title_text
+        | Оптовым покупателям
+    .wholesale-buyers__wrapper
+      .wholesale-buyers__item.wholesale-buyers__audio-adv
+        .wholesale-buyers__item_wrapper
+          audio#player(src="static/audio/audio-adv.mp3")
+          button(type="button" play-audio="play-audio" style="background-image: url('static/i/general/svg/audio.svg');").cooperation__audio_play-button
+          button(type="button" pause-audio="pause-audio").cooperation__audio_pause-button
+
+          .wholesale-buyers__audio-adv_description
+            | Бесплатная аудио-реклама
+            br
+            | для торгово-развлекательных центров.
+            br
+            a(href='#'): b Слушать
+      .wholesale-buyers__item.wholesale-buyers__delivery
+        .wholesale-buyers__item_wrapper
+          .icons.icons__delivery
+            img(src="static/i/general/svg/delivery.svg", alt="Delivery")
+          .wholesale-buyers__delivery_description
+            | Бесплатная доставка.
+            br
+            a(href='#'): b В Москве и Подмосковье
+      .wholesale-buyers__item.wholesale-buyers__sorting
+        .wholesale-buyers__item_wrapper
+          .wholesale-buyers__item_title
+            | Поштучная
+            br
+            | подсортировка.
+            br
+            b Всегда в наличии.
+          .wholesale-buyers__sorting_icon
+            | NOS

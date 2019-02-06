@@ -5,6 +5,7 @@ module.exports = function() {
         './node_modules/svg4everybody/dist/svg4everybody.js',
         './node_modules/object-fit-images/dist/ofi.js',
         './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        './node_modules/slick-carousel/slick/slick.js',
         './node_modules/owl.carousel/dist/owl.carousel.js'
       ])
       .pipe($.glp.concat('libs.js'))
@@ -20,6 +21,7 @@ module.exports = function() {
         './node_modules/svg4everybody/dist/svg4everybody.js',
         './node_modules/object-fit-images/dist/ofi.js',
         './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        './node_modules/slick-carousel/slick/slick.js',
         './node_modules/owl.carousel/dist/owl.carousel.js'
       ])
       .pipe($.glp.concat('libs.js'))

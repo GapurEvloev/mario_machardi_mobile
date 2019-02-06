@@ -1,0 +1,9 @@
+mixin bannerWithText(img,text,boldText)
+	//Баннер
+	section.section.section--banner
+		.banner
+			img(src="static/i/content/banners/" +img, alt=img)
+			span.banner-descr
+				p!=text
+					br
+					strong!=boldText

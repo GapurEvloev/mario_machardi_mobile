@@ -12,7 +12,7 @@
 .navbar-logo
 
 	img
-		height 75px
+		height 80px
 		width 105px
 
 .navbar-brand
@@ -25,21 +25,23 @@
 		height 16px
 		width 90px
 
-.navbar-toggler
-	background transparent
-	border 0
-	cursor pointer
-	display block
-	height 35px
-	padding 0
-	position relative
-	width 32px
-	margin-left 10px
-	margin-right 10px
+.navbar
+	&-toggler
+	&-search-button
+		background transparent
+		border 0
+		cursor pointer
+		display block
+		height 35px
+		padding 0
+		position relative
+		width 32px
+		margin-left 10px
+		margin-right 10px
 
-	&:hover,
-	&:focus
-		text-decoration none
+		&:hover,
+		&:focus
+			text-decoration none
 
 .navbar-toggler-bar
 	background-color $black
@@ -99,14 +101,26 @@
 		right 40px
 
 	&-button
-		background-color: #ccc
+		background-color: #fff
+		height 35px
+		width 35px
+		img
+			position: absolute
+			top 1px
+			width 19px
+			object-fit scale-down
+			object-position: right
+
 .navbar-collapse
 	background-color #fff
-	position relative
+
+	.navbar-collapse-wrapper
+		height 570px
 
 
 .navbar-collapse-inner
-	padding: 17.5px	0
+	padding: 0 0 17.5px
+	position: relative
 	
 
 .nav-menu
@@ -119,39 +133,51 @@
 	list-style none
 	margin-bottom 0
 	padding-left 0
-	margin-bottom 35px
+	position: relative
 
 .nav-item
 	letter-spacing 0.02em
-	&.has-sub-menu.active
-		padding-bottom 10px
-		position: relative
-		&:after
-			background-color: #fff;
-			border: 2px solid $black;
-			border-bottom: none;
-			border-left: none;
-			bottom: -11px;
-			content: '';
-			height: 10px;
-			left: calc(50% - 10px);
-			position: absolute;
-			-webkit-transform-origin: top left;
-			-ms-transform-origin: top left;
-			-o-transform-origin: top left;
-			transform-origin: top left;
-			-webkit-transform: rotate(-45deg);
-			-ms-transform: rotate(-45deg);
-			-o-transform: rotate(-45deg);
-			transform: rotate(-45deg);
-			width: 10px;
-			top 30px
-			z-index: 1;
-
+	transition all 200ms linear
+	&.active
+		.nav-sub-menu-wrapper
+			display: block
+		.nav-link
+			font-weight 600
+			&:after
+				display: block
+			
 .nav-link
 	color $black
 	font-size 12px
 	text-transform: uppercase
+	position: relative
+	transition all 0.15s ease-in-out
+	font-weight 400
+	&:hover
+		font-weight 500
+	&:after
+		transition all 0.15s ease-in-out
+		background-color: #fff;
+		border: 2px solid $black;
+		border-bottom: none;
+		border-left: none;
+		bottom: -11px;
+		content: '';
+		height: 10px;
+		left: calc(50% - 10px);
+		position: absolute;
+		-webkit-transform-origin: top left;
+		-ms-transform-origin: top left;
+		-o-transform-origin: top left;
+		transform-origin: top left;
+		-webkit-transform: rotate(-45deg)translateY(1px);
+		-ms-transform: rotate(-45deg)translateY(1px);
+		-o-transform: rotate(-45deg)translateY(1px);
+		transform: rotate(-45deg)translateY(1px);
+		width: 10px;
+		top 30px
+		z-index: 3;
+		display: none
 
 .nav-sub-menu
 	list-style none
@@ -160,32 +186,50 @@
 	padding-bottom 15px
 	
 	&-wrapper
-		border-top: 1px solid #f0f0f0;
-
+		transition all 0.15s ease-in-out
+		border-top: 2px solid $black;
+		display: none
+		position: absolute
+		margin-top 15px
+		width: 100%;
+		left 0
+		z-index 2
+		
 .nav-sub-item
-	@media (min-width: $grid-md)
-		padding-top 8px
-		padding-bottom 8px
-
-	+ .nav-sub-item
-		.nav-sub-link
-			@media (max-width: $grid-sm-max)
-				padding-top 9px
+	position: relative
+	&:after
+		content ''
+		position absolute
+		width 100%
+		height 1px
+		background-color: $gray-100
+		bottom 0
+		left 0
+	&:before
+		content ''
+		position: absolute
+		width 9px
+		height 9px
+		background-color transparent
+		border-top 2px solid $black
+		border-right 2px solid $black
+		transform rotate(45deg)translateY(-50%)
+		top 50%
+		right 7px
+	
 
 .nav-sub-link
 	display block
+	color #000
+	font-weight 400	
+	padding 15px 0
 
 	@media (max-width: $grid-sm-max)
-		color alpha(#fff, 0.8)
-		font-size 17px
-		font-weight 300
-		padding 0 5px 9px
-
-		&:hover
-			color #fff
+		color #000
+		font-size 15px
 	
 	@media (min-width: $grid-md)
-		color #fff
+		color #000
 		font-size 14px
 		font-weight 500
 		line-height 1.08
@@ -213,7 +257,7 @@
 			fill #fff
 			height 6px
 			margin-left 8px
-			transition fill 0.15s ease-in-out
+			transition all 0.15s ease-in-out
 			width 9px
 
 	&__list

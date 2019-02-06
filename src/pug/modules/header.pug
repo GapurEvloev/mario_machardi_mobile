@@ -12,93 +12,95 @@ header.header
           a.navbar-logo(href="#")
             img(src="static/i/general/logo.svg" alt="FindFace Logo")
 
-          button.navbar-toggler.navbar-search-button.collapsed(type="button" data-toggle="collapse" data-target="#search" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation") s
+          button.navbar-toggler.navbar-search-button.collapsed(type="button" data-toggle="collapse" data-target="#search" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation")
+            img(src="static/i/general/svg/search.svg" alt="Search")
         .navbar-search.collapse#search 
           form.navbar-search-form
             input.navbar-search-input.form-control(type="search" aria-label="Search") 
             span.navbar-search-icon s
         .navbar-collapse.collapse#navigation
-          .navbar-collapse-inner
-            //- form.navbar-search.d-md-none
-            //-   +icon("search")
-            //-   input.form-control(type="search")
-            nav.nav
-              ul.nav-menu
-                li.nav-item.has-sub-menu
-                  a.nav-link.collapsed(href="#") Продукция
-                  .nav-sub-menu-wrapper.collapse#nav-products
-                    ul.nav-sub-menu
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Сорочки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Галстуки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Кашне
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Пластроны
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Жилеты
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Бабочки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Подтяжки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Брюки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Запонки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Вся продукция
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Распродажа
+          .navbar-collapse-wrapper
+            .navbar-collapse-inner
+              //- form.navbar-search.d-md-none
+              //-   +icon("search")
+              //-   input.form-control(type="search")
+              nav.nav
+                ul.nav-menu
+                  li.nav-item.has-sub-menu
+                    a.nav-link(href="#") Продукция
+                    .nav-sub-menu-wrapper#nav-products
+                      ul.nav-sub-menu
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Сорочки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Галстуки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Кашне
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Пластроны
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Жилеты
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Бабочки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Подтяжки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Брюки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Запонки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Вся продукция
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Распродажа
 
-                li.nav-item.has-sub-menu
-                  a.nav-link.collapsed(href="#") О компании
-                  .nav-sub-menu-wrapper.collapse#nav-about
-                    ul.nav-sub-menu
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") О нас
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Магазины
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Контакты
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Отзывы
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Сотрудничество
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Гарантии
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Возврат и обмен
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Доставка
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Гид по размерам
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Технологии
-                
-                li.nav-item.has-sub-menu
-                  a.nav-link.collapsed(href="#") Оптовым покупателям
-                  .nav-sub-menu-wrapper.collapse#nav-customers
-                    ul.nav-sub-menu
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Преимущества
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Предзаказ
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Сорочки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Галстуки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Кашне
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Пластроны
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Жилеты
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Бабочки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Подтяжки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Брюки
-                      li.nav-sub-item
-                        a.nav-sub-link(href="#") Запонки
+                  li.nav-item.has-sub-menu
+                    a.nav-link(href="#") О компании
+                    .nav-sub-menu-wrapper#nav-about
+                      ul.nav-sub-menu
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") О нас
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Магазины
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Контакты
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Отзывы
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Сотрудничество
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Гарантии
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Возврат и обмен
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Доставка
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Гид по размерам
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Технологии
+                  
+                  li.nav-item.has-sub-menu
+                    a.nav-link(href="#") Оптовым покупателям
+                    .nav-sub-menu-wrapper#nav-customers
+                      ul.nav-sub-menu
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Преимущества
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Предзаказ
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Сорочки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Галстуки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Кашне
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Пластроны
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Жилеты
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Бабочки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Подтяжки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Брюки
+                        li.nav-sub-item
+                          a.nav-sub-link(href="#") Запонки

@@ -1,0 +1,35 @@
+.section--main-slider
+	//
+		
+	.main-slider
+		.slide
+			img 
+				width 100%
+				
+		.owl
+			&-dots
+				position: relative
+				top -20px
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				justify-content center
+			
+			&-dot
+				margin: 0 4.5px
+				span
+					height 10px
+					display block
+					width 10px
+					border-radius 50%
+					background-color: #CBCBCB
+				&.active
+					span
+						background-color: $black
+						
+	@media(min-width: $grid-sm)
+		height: auto
+		.main-slider
+			height: auto
