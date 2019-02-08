@@ -1,0 +1,17 @@
+//Описание
+section.section.section--drop-descr
+  .container
+    .drop-descr#drop-descr
+      .drop-descr-list
+        - var items = [ { collapse_attr: "1", name: "Преимущества", icon: "drop-arrow", text: "<p>Высокое качество тканей;</p><p>Высокое качество расходных материалов<br><small>(нитки, пуговицы, резинки и т.д.);</small></p><p>Высочайшее качество готовых изделий;</p><p>Демократичные цены;</p><p>Скидки для оптовых покупателей.</p>" }, { collapse_attr: "2", name: "О компании", icon: "drop-arrow", text: "<p>C&nbsp;1992 года бренд &laquo;Mario Machardi&raquo; представлен и&nbsp;на&nbsp;российском рынке. Благодаря изысканному сочетанию классических и&nbsp;современных тенденций мировой моды, бескомпромиссному качеству, уникальному дизайну и&nbsp;инновационным технологиям обработки тканей, продукция &laquo;Mario Machardi&raquo; получила широкое признание покупателей и&nbsp;сегодня, новые коллекции сорочек, галстуков и&nbsp;аксессуаров можно приобрести в&nbsp;сети магазинов и&nbsp;фирменных точках продаж &laquo;Mario Machardi&raquo; уже по&nbsp;всей России.</p>" }, { collapse_attr: "3", name: "Рубашки Non Iron", icon: "drop-arrow", text: "<p>Мужские рубашки NON IRON (не&nbsp;требующие глажки) от&nbsp;компании Machardi&nbsp;&mdash; это отличная возможность для торговых сетей и&nbsp;отдельных магазинов привлечь новых клиентов&nbsp;&mdash; поклонников европейского качества и&nbsp;изысканного итальянского стиля.</p> <p>Во&nbsp;главу угла производители сорочек ставят не&nbsp;только стиль и&nbsp;изысканность, но&nbsp;и&nbsp;качество. Сегодня качество Machardi удовлетворяет высоким требованиям самых взыскательных покупателей. Рубашки, не&nbsp;трубующие глажки, пользуются растущим спросом самых модных и&nbsp;престижных бутиков Москвы. Эксперты рынка мужской одежды хорошо понимают: такой идеальный товар не&nbsp;залеживается на&nbsp;полках магазинов, несмотря на&nbsp;кризис и&nbsp;валютный курс.</p> <p>Производитель позиционирует свою продукцию как качественную одежду и&nbsp;аксессуары для среднего класса. Поэтому, удерживая качество на&nbsp;самом высоком уровне, Machardi придерживается среднего ценового диапазона. Для оптовых покупателей предусмотрены серьезные скидки и&nbsp;гибкая программа лояльности.</p>" } ]
+
+        each item in items
+          .drop-descr-item
+            .drop-descr-item__head(id=!"drop-descr-heading-"+item.collapse_attr)
+              button.drop-descr-item__link.collapsed(type="button" data-target="#drop-descr-collapse-"+item.collapse_attr data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-"+item.collapse_attr)
+                .drop-descr-item__link-inner
+                  img(class="icon icon--"+item.icon src="static/i/general/svg/"+item.icon+".svg" alt=item.name)
+                  = item.name
+            .drop-descr-item__text.collapse(id="drop-descr-collapse-"+item.collapse_attr aria-labelledby="drop-descr-heading-"+item.collapse_attr data-parent="#drop-descr")
+              .drop-descr-item__text-inner
+                != item.text

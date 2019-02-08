@@ -23,7 +23,7 @@
           </div>
           <div class="navbar-search collapse" id="search"> 
             <form class="navbar-search-form">
-              <input class="navbar-search-input form-control" type="search" aria-label="Search"><span class="navbar-search-icon">s</span>
+              <input class="navbar-search-input form-control" type="search" aria-label="Search"><span class="navbar-search-icon" style="background-image: url(static/i/general/svg/search.svg)"></span>
             </form>
           </div>
           <div class="navbar-collapse collapse" id="navigation">
@@ -225,9 +225,9 @@
         <div class="wholesale-buyers__item wholesale-buyers__audio-adv">
           <div class="wholesale-buyers__item_wrapper">
             <audio id="player" src="static/audio/audio-adv.mp3"></audio>
-            <button class="cooperation__audio_play-button" type="button" play-audio="play-audio" style="background-image: url('static/i/general/svg/audio.svg');"></button>
-            <button class="cooperation__audio_pause-button" type="button" pause-audio="pause-audio"></button>
-            <div class="wholesale-buyers__audio-adv_description">Бесплатная аудио-реклама<br/>для торгово-развлекательных центров.<br/><a href="#"><b>Слушать</b></a></div>
+            <button class="cooperation__audio_play-button show" type="button" play-audio="play-audio" style="background-image: url('static/i/general/svg/audio.svg');"></button>
+            <button class="cooperation__audio_pause-button hide" type="button" pause-audio="pause-audio"></button>
+            <div class="wholesale-buyers__audio-adv_description">Бесплатная аудио-реклама<br/>для ТРЦ.<br/><a href="#"><b>Слушать</b></a></div>
           </div>
         </div>
         <div class="wholesale-buyers__item wholesale-buyers__delivery">
@@ -238,12 +238,60 @@
         </div>
         <div class="wholesale-buyers__item wholesale-buyers__sorting">
           <div class="wholesale-buyers__item_wrapper">
-            <div class="wholesale-buyers__item_title">Поштучная<br/>подсортировка.<br/><b>Всегда в наличии.</b></div>
             <div class="wholesale-buyers__sorting_icon">NOS</div>
+            <div class="wholesale-buyers__item_title">
+              Поштучная
+              подсортировка.<br/><b>Всегда в наличии.</b>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!--Описание-->
+    <section class="section section--drop-descr">
+      <div class="container">
+        <div class="drop-descr" id="drop-descr">
+          <div class="drop-descr-list">
+            <div class="drop-descr-item">
+              <div class="drop-descr-item__head" id="false1">
+                <button class="drop-descr-item__link collapsed" type="button" data-target="#drop-descr-collapse-1" data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-1">
+                  <div class="drop-descr-item__link-inner"><img class="icon icon--drop-arrow" src="static/i/general/svg/drop-arrow.svg" alt="Преимущества">Преимущества
+                  </div>
+                </button>
+              </div>
+              <div class="drop-descr-item__text collapse" id="drop-descr-collapse-1" aria-labelledby="drop-descr-heading-1" data-parent="#drop-descr">
+                <div class="drop-descr-item__text-inner"><p>Высокое качество тканей;</p><p>Высокое качество расходных материалов<br><small>(нитки, пуговицы, резинки и т.д.);</small></p><p>Высочайшее качество готовых изделий;</p><p>Демократичные цены;</p><p>Скидки для оптовых покупателей.</p>
+                </div>
+              </div>
+            </div>
+            <div class="drop-descr-item">
+              <div class="drop-descr-item__head" id="false2">
+                <button class="drop-descr-item__link collapsed" type="button" data-target="#drop-descr-collapse-2" data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-2">
+                  <div class="drop-descr-item__link-inner"><img class="icon icon--drop-arrow" src="static/i/general/svg/drop-arrow.svg" alt="О компании">О компании
+                  </div>
+                </button>
+              </div>
+              <div class="drop-descr-item__text collapse" id="drop-descr-collapse-2" aria-labelledby="drop-descr-heading-2" data-parent="#drop-descr">
+                <div class="drop-descr-item__text-inner"><p>C&nbsp;1992 года бренд &laquo;Mario Machardi&raquo; представлен и&nbsp;на&nbsp;российском рынке. Благодаря изысканному сочетанию классических и&nbsp;современных тенденций мировой моды, бескомпромиссному качеству, уникальному дизайну и&nbsp;инновационным технологиям обработки тканей, продукция &laquo;Mario Machardi&raquo; получила широкое признание покупателей и&nbsp;сегодня, новые коллекции сорочек, галстуков и&nbsp;аксессуаров можно приобрести в&nbsp;сети магазинов и&nbsp;фирменных точках продаж &laquo;Mario Machardi&raquo; уже по&nbsp;всей России.</p>
+                </div>
+              </div>
+            </div>
+            <div class="drop-descr-item">
+              <div class="drop-descr-item__head" id="false3">
+                <button class="drop-descr-item__link collapsed" type="button" data-target="#drop-descr-collapse-3" data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-3">
+                  <div class="drop-descr-item__link-inner"><img class="icon icon--drop-arrow" src="static/i/general/svg/drop-arrow.svg" alt="Рубашки Non Iron">Рубашки Non Iron
+                  </div>
+                </button>
+              </div>
+              <div class="drop-descr-item__text collapse" id="drop-descr-collapse-3" aria-labelledby="drop-descr-heading-3" data-parent="#drop-descr">
+                <div class="drop-descr-item__text-inner"><p>Мужские рубашки NON IRON (не&nbsp;требующие глажки) от&nbsp;компании Machardi&nbsp;&mdash; это отличная возможность для торговых сетей и&nbsp;отдельных магазинов привлечь новых клиентов&nbsp;&mdash; поклонников европейского качества и&nbsp;изысканного итальянского стиля.</p> <p>Во&nbsp;главу угла производители сорочек ставят не&nbsp;только стиль и&nbsp;изысканность, но&nbsp;и&nbsp;качество. Сегодня качество Machardi удовлетворяет высоким требованиям самых взыскательных покупателей. Рубашки, не&nbsp;трубующие глажки, пользуются растущим спросом самых модных и&nbsp;престижных бутиков Москвы. Эксперты рынка мужской одежды хорошо понимают: такой идеальный товар не&nbsp;залеживается на&nbsp;полках магазинов, несмотря на&nbsp;кризис и&nbsp;валютный курс.</p> <p>Производитель позиционирует свою продукцию как качественную одежду и&nbsp;аксессуары для среднего класса. Поэтому, удерживая качество на&nbsp;самом высоком уровне, Machardi придерживается среднего ценового диапазона. Для оптовых покупателей предусмотрены серьезные скидки и&nbsp;гибкая программа лояльности.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- include ../sections/what-we-do-->
     <!-- include ../sections/who-are-you-->
     <!-- include ../sections/select-case-->
@@ -263,8 +311,162 @@
     <!--     .page-footer-button-->
     <!--       a.btn.btn-primary(href="#") Download-->
   </main>
+  <!--Footer-->
   <footer class="footer">
-    <div class="container"></div>
+    <div class="container">
+      <div class="footer-logo"><img src="static/i/general/footer_logo.svg" alt="Signore Mario Machardi"></div>
+    </div>
+    <div class="footer-fixed">
+      <div class="container">
+        <!-- Personal Account-->
+        <div class="footer-fixed__personal-account personal-account">
+          <!-- TODO: Структура если пользователь НЕ авторизован-->
+          <ul class="personal-account__bottom">
+            <li class="personal-account__bottom_item"><img src="static/i/general/svg/sign-icon.svg" alt="Войти"/>
+              <div class="personal-account__bottom_link" data-popup="#popup-signin">Войти</div>
+            </li>
+            <li class="personal-account__bottom_item"><img src="static/i/general/svg/basket.svg" alt="Корзина"/><a class="personal-account__bottom_link" href="/basket/">Корзина</a></li>
+            <li class="personal-account__bottom_item"><img src="static/i/general/svg/request-call.svg" alt="Заказать звонок"/>
+              <div class="personal-account__bottom_link personal-account__bottom_request-call" data-popup="#popup-request-call">Заказать звонок</div>
+            </li>
+          </ul>
+        </div>
+        <!-- Попап Вход-->
+        <div class="footer-popup-form" id="popup-signin" data-popup-modal="data-popup-modal">
+          <div class="footer-popup-form__title"><span>
+               Войти </span>или
+            <div class="footer-popup-form__title_link" data-popup="#popup-signup">
+               зарегистрироваться</div>
+          </div>
+          <div class="footer-popup-form__wrapper">
+            <form class="footer-popup-form__form" action="?" method="POST">
+              <div class="footer-popup-form__form_columns">
+                <div class="footer-popup-form__form_column">
+                  <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
+                    <label class="footer-popup-form__form_label"><img src="static/i/general/svg/login-icon.svg" alt="Логин"/>
+                      <input class="footer-popup-form__form_field" placeholder="Логин" type="text" name="login" data-validation="required"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="footer-popup-form__form_column">
+                  <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
+                    <label class="footer-popup-form__form_label"><img src="static/i/general/svg/pass-icon.svg" alt="Пароль"/>
+                      <input class="footer-popup-form__form_field" placeholder="Пароль" type="password" name="password" data-validation="length" data-validation-length="min6"/>
+                    </label>
+                    <div class="footer-popup-form__form_subfield-link" data-popup="#popup-remind-password">Забыли пароль?</div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                <button class="btn btn_theme_black btn_size_m" type="submit">Войти</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Попап Регистрация-->
+        <div class="footer-popup-form" id="popup-signup" data-popup-modal="data-popup-modal">
+          <div class="footer-popup-form__title"></div>
+          <div class="footer-popup-form__title"><span>
+               Зарегистрироваться </span>или
+            <div class="footer-popup-form__title_link" data-popup="#popup-signin">
+               войти</div>
+          </div>
+          <div class="footer-popup-form__wrapper">
+            <form class="footer-popup-form__form" action="?" method="POST">
+              <div class="footer-popup-form__form_column">
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Email</label>
+                  <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
+                </div>
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">ФИО</label>
+                  <input class="footer-popup-form__form_field" type="text" name="fio" data-validation="required"/>
+                </div>
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Организация</label>
+                  <input class="footer-popup-form__form_field" type="text" name="org" data-validation="required"/>
+                </div>
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Адрес магазина</label>
+                  <input class="footer-popup-form__form_field" type="text" name="address" data-validation="required"/>
+                </div>
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Город</label>
+                  <input class="footer-popup-form__form_field" type="text" name="city" data-validation="required"/>
+                </div>
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Телефон</label>
+                  <input class="footer-popup-form__form_field" type="text" name="phone-number" data-validation="length number" data-validation-length="10-11" data-validation-ignore="+"/>
+                </div>
+                <!-- TODO: чтобы Подтверждение пароля работало исправно, в поле 'data-validation-confirm'-->
+                <!-- должно быть name от input, то есть pass_validate-->
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Пароль<span class="footer-popup-form__form_label-help">( не менее 6 символов )</span></label>
+                  <input class="footer-popup-form__form_field" type="password" name="pass_validate" data-validation="length" data-validation-length="min6"/>
+                </div>
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Подтверждение пароля</label>
+                  <input class="footer-popup-form__form_field" type="password" name="password_confirmation" data-validation="confirmation length" data-validation-confirm="pass_validate" data-validation-length="min6"/>
+                </div>
+                <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
+                  <div class="footer-popup-form__form_subfield-text">Все поля, обязательны для заполнения.</div>
+                </div>
+                <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                  <button class="btn btn_theme_black btn_size_m" type="submit">Регистрация</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Попап Забыли пароль-->
+        <div class="footer-popup-form" id="popup-remind-password" data-popup-modal="data-popup-modal">
+          <div class="footer-popup-form__title">Забыли пароль?
+            <div class="footer-popup-form__title_subtitle">Укажите адрес электронной почты или номер телефона, указанные вами при регистрации</div>
+          </div>
+          <div class="footer-popup-form__wrapper">
+            <form class="footer-popup-form__form" action="?" method="POST">
+              <div class="footer-popup-form__form_column">
+                <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
+                  <label class="footer-popup-form__form_label">Email</label>
+                  <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
+                </div>
+                <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                  <button class="btn btn_theme_black btn_size_m" type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Попап Заказать звонок-->
+        <div class="footer-popup-form" id="popup-request-call" data-popup-modal="data-popup-modal">
+          <div class="footer-popup-form__title">Заказать звонок</div>
+          <div class="footer-popup-form__wrapper">
+            <form class="footer-popup-form__form" action="?" method="POST">
+              <div class="footer-popup-form__form_column">
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">ФИО</label>
+                  <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
+                </div>
+              </div>
+              <div class="footer-popup-form__form_column">
+                <div class="footer-popup-form__form_group">
+                  <label class="footer-popup-form__form_label">Телефон</label>
+                  <input class="footer-popup-form__form_field" type="text" name="phone-number" data-validation="length number" data-validation-length="10-11" data-validation-ignore="+"/>
+                </div>
+              </div>
+              <div class="footer-popup-form__form_group">
+                <label class="footer-popup-form__form_label">Комментарий</label>
+                <textarea class="footer-popup-form__form_textarea" name="comment" rows="6"></textarea>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                <button class="btn btn_theme_black btn_size_m" type="submit">Заказать</button>
+                <button class="btn btn_theme_black btn_size_m" type="button" data-popup="#popup-request-call">Отменить</button>
+              </div>
+            </form>
+          </div><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="static/js/libs.js"></script>
   <script src="static/js/main.js"></script>

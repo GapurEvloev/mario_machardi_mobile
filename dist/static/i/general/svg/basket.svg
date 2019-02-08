@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16.12">
+  <title>basket</title>
+  <g>
+    <g>
+      <path d="M0,5.12H16l-2,11H2Z" transform="translate(0 0)" style="fill: #fff"/>
+      <path d="M2.4,7.12l1.27,7h8.66l1.27-7H2.4M0,5.12H16l-2,11H2Z" transform="translate(0 0)"/>
+    </g>
+    <path d="M3.76,5.24,4.82,1h6.36l1.06,4.24" transform="translate(0 0)" style="fill: #fff;stroke: #000;stroke-width: 2px"/>
+  </g>
+</svg>

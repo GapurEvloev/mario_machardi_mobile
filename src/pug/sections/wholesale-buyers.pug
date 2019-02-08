@@ -8,13 +8,13 @@ mixin wholesale-buyers()
       .wholesale-buyers__item.wholesale-buyers__audio-adv
         .wholesale-buyers__item_wrapper
           audio#player(src="static/audio/audio-adv.mp3")
-          button(type="button" play-audio="play-audio" style="background-image: url('static/i/general/svg/audio.svg');").cooperation__audio_play-button
-          button(type="button" pause-audio="pause-audio").cooperation__audio_pause-button
+          button(type="button" play-audio="play-audio" style="background-image: url('static/i/general/svg/audio.svg');").cooperation__audio_play-button.show
+          button(type="button" pause-audio="pause-audio").cooperation__audio_pause-button.hide
 
           .wholesale-buyers__audio-adv_description
             | Бесплатная аудио-реклама
             br
-            | для торгово-развлекательных центров.
+            | для ТРЦ.
             br
             a(href='#'): b Слушать
       .wholesale-buyers__item.wholesale-buyers__delivery
@@ -27,11 +27,10 @@ mixin wholesale-buyers()
             a(href='#'): b В Москве и Подмосковье
       .wholesale-buyers__item.wholesale-buyers__sorting
         .wholesale-buyers__item_wrapper
+          .wholesale-buyers__sorting_icon
+            | NOS
           .wholesale-buyers__item_title
             | Поштучная
-            br
             | подсортировка.
             br
             b Всегда в наличии.
-          .wholesale-buyers__sorting_icon
-            | NOS
