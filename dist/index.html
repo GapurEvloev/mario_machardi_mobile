@@ -156,7 +156,7 @@
       <div class="container">
         <div class="innovations">
           <div class="innovations__title global-blocks-title"><span class="global-blocks-title_text">Инновации</span></div>
-          <div class="innovations__list clearfix">
+          <div class="innovations__list">
             <div class="innovations__list_item">
               <div class="innovations__list_item_wrapper">
                 <div class="innovations__list_icons">
@@ -317,153 +317,145 @@
       <div class="footer-logo"><img src="static/i/general/footer_logo.svg" alt="Signore Mario Machardi"></div>
     </div>
     <div class="footer-fixed">
-      <div class="container">
-        <!-- Personal Account-->
-        <div class="footer-fixed__personal-account personal-account">
-          <!-- TODO: Структура если пользователь НЕ авторизован-->
-          <ul class="personal-account__bottom">
-            <li class="personal-account__bottom_item"><img src="static/i/general/svg/sign-icon.svg" alt="Войти"/>
-              <div class="personal-account__bottom_link" data-popup="#popup-signin">Войти</div>
-            </li>
-            <li class="personal-account__bottom_item"><img src="static/i/general/svg/basket.svg" alt="Корзина"/><a class="personal-account__bottom_link" href="/basket/">Корзина</a></li>
-            <li class="personal-account__bottom_item"><img src="static/i/general/svg/request-call.svg" alt="Заказать звонок"/>
-              <div class="personal-account__bottom_link personal-account__bottom_request-call" data-popup="#popup-request-call">Заказать звонок</div>
-            </li>
-          </ul>
+      <!-- Personal Account-->
+      <div class="footer-fixed__personal-account personal-account">
+        <!-- TODO: Структура если пользователь НЕ авторизован-->
+        <ul class="personal-account__bottom">
+          <li class="personal-account__bottom_item"><img src="static/i/general/svg/sign-icon.svg" alt="Войти"/>
+            <div class="personal-account__bottom_link" data-popup="#popup-signin">Войти</div>
+          </li>
+          <li class="personal-account__bottom_item"><img src="static/i/general/svg/basket.svg" alt="Корзина"/><a class="personal-account__bottom_link" href="/basket/">Корзина</a></li>
+          <li class="personal-account__bottom_item"><img src="static/i/general/svg/request-call.svg" alt="Заказать звонок"/>
+            <div class="personal-account__bottom_link personal-account__bottom_request-call" data-popup="#popup-request-call">Заказать звонок</div>
+          </li>
+        </ul>
+      </div>
+      <!-- Попап Вход-->
+      <div class="footer-popup-form" id="popup-signin" data-popup-modal="data-popup-modal">
+        <div class="footer-popup-form__title"><span>
+             Войти </span>или
+          <div class="footer-popup-form__title_link" data-popup="#popup-signup">
+             зарегистрироваться</div>
         </div>
-        <!-- Попап Вход-->
-        <div class="footer-popup-form" id="popup-signin" data-popup-modal="data-popup-modal">
-          <div class="footer-popup-form__title"><span>
-               Войти </span>или
-            <div class="footer-popup-form__title_link" data-popup="#popup-signup">
-               зарегистрироваться</div>
-          </div>
-          <div class="footer-popup-form__wrapper">
-            <form class="footer-popup-form__form" action="?" method="POST">
-              <div class="footer-popup-form__form_columns">
-                <div class="footer-popup-form__form_column">
-                  <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
-                    <label class="footer-popup-form__form_label"><img src="static/i/general/svg/login-icon.svg" alt="Логин"/>
-                      <input class="footer-popup-form__form_field" placeholder="Логин" type="text" name="login" data-validation="required"/>
-                    </label>
-                  </div>
-                </div>
-                <div class="footer-popup-form__form_column">
-                  <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
-                    <label class="footer-popup-form__form_label"><img src="static/i/general/svg/pass-icon.svg" alt="Пароль"/>
-                      <input class="footer-popup-form__form_field" placeholder="Пароль" type="password" name="password" data-validation="length" data-validation-length="min6"/>
-                    </label>
-                    <div class="footer-popup-form__form_subfield-link" data-popup="#popup-remind-password">Забыли пароль?</div>
-                  </div>
-                </div>
+        <div class="footer-popup-form__wrapper">
+          <form class="footer-popup-form__form" action="?" method="POST">
+            <div class="footer-popup-form__form_column">
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field sign-in-field" placeholder="Логин" type="text" name="login" data-validation="required"/>
+                <label class="footer-popup-form__form_label"><img src="static/i/general/svg/login-icon.svg" alt="Логин"/></label>
               </div>
-              <div class="footer-popup-form__form_group footer-popup-form__form_submit">
-                <button class="btn btn_theme_black btn_size_m" type="submit">Войти</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- Попап Регистрация-->
-        <div class="footer-popup-form" id="popup-signup" data-popup-modal="data-popup-modal">
-          <div class="footer-popup-form__title"></div>
-          <div class="footer-popup-form__title"><span>
-               Зарегистрироваться </span>или
-            <div class="footer-popup-form__title_link" data-popup="#popup-signin">
-               войти</div>
-          </div>
-          <div class="footer-popup-form__wrapper">
-            <form class="footer-popup-form__form" action="?" method="POST">
-              <div class="footer-popup-form__form_column">
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Email</label>
-                  <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
-                </div>
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">ФИО</label>
-                  <input class="footer-popup-form__form_field" type="text" name="fio" data-validation="required"/>
-                </div>
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Организация</label>
-                  <input class="footer-popup-form__form_field" type="text" name="org" data-validation="required"/>
-                </div>
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Адрес магазина</label>
-                  <input class="footer-popup-form__form_field" type="text" name="address" data-validation="required"/>
-                </div>
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Город</label>
-                  <input class="footer-popup-form__form_field" type="text" name="city" data-validation="required"/>
-                </div>
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Телефон</label>
-                  <input class="footer-popup-form__form_field" type="text" name="phone-number" data-validation="length number" data-validation-length="10-11" data-validation-ignore="+"/>
-                </div>
-                <!-- TODO: чтобы Подтверждение пароля работало исправно, в поле 'data-validation-confirm'-->
-                <!-- должно быть name от input, то есть pass_validate-->
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Пароль<span class="footer-popup-form__form_label-help">( не менее 6 символов )</span></label>
-                  <input class="footer-popup-form__form_field" type="password" name="pass_validate" data-validation="length" data-validation-length="min6"/>
-                </div>
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Подтверждение пароля</label>
-                  <input class="footer-popup-form__form_field" type="password" name="password_confirmation" data-validation="confirmation length" data-validation-confirm="pass_validate" data-validation-length="min6"/>
-                </div>
-                <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
-                  <div class="footer-popup-form__form_subfield-text">Все поля, обязательны для заполнения.</div>
-                </div>
-                <div class="footer-popup-form__form_group footer-popup-form__form_submit">
-                  <button class="btn btn_theme_black btn_size_m" type="submit">Регистрация</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- Попап Забыли пароль-->
-        <div class="footer-popup-form" id="popup-remind-password" data-popup-modal="data-popup-modal">
-          <div class="footer-popup-form__title">Забыли пароль?
-            <div class="footer-popup-form__title_subtitle">Укажите адрес электронной почты или номер телефона, указанные вами при регистрации</div>
-          </div>
-          <div class="footer-popup-form__wrapper">
-            <form class="footer-popup-form__form" action="?" method="POST">
-              <div class="footer-popup-form__form_column">
-                <div class="footer-popup-form__form_group footer-popup-form__form_group_center">
-                  <label class="footer-popup-form__form_label">Email</label>
-                  <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
-                </div>
-                <div class="footer-popup-form__form_group footer-popup-form__form_submit">
-                  <button class="btn btn_theme_black btn_size_m" type="submit">Отправить</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- Попап Заказать звонок-->
-        <div class="footer-popup-form" id="popup-request-call" data-popup-modal="data-popup-modal">
-          <div class="footer-popup-form__title">Заказать звонок</div>
-          <div class="footer-popup-form__wrapper">
-            <form class="footer-popup-form__form" action="?" method="POST">
-              <div class="footer-popup-form__form_column">
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">ФИО</label>
-                  <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
-                </div>
-              </div>
-              <div class="footer-popup-form__form_column">
-                <div class="footer-popup-form__form_group">
-                  <label class="footer-popup-form__form_label">Телефон</label>
-                  <input class="footer-popup-form__form_field" type="text" name="phone-number" data-validation="length number" data-validation-length="10-11" data-validation-ignore="+"/>
-                </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input last-input">
+                <input class="footer-popup-form__form_field sign-in-field" placeholder="Пароль" type="password" name="password" data-validation="length" data-validation-length="min6"/>
+                <label class="footer-popup-form__form_label"><img src="static/i/general/svg/pass-icon.svg" alt="Пароль"/></label>
               </div>
               <div class="footer-popup-form__form_group">
-                <label class="footer-popup-form__form_label">Комментарий</label>
-                <textarea class="footer-popup-form__form_textarea" name="comment" rows="6"></textarea>
+                <div class="footer-popup-form__form_subfield-link" data-popup="#popup-remind-password">Забыли пароль?</div>
               </div>
               <div class="footer-popup-form__form_group footer-popup-form__form_submit">
-                <button class="btn btn_theme_black btn_size_m" type="submit">Заказать</button>
-                <button class="btn btn_theme_black btn_size_m" type="button" data-popup="#popup-request-call">Отменить</button>
+                <button class="btn btn_theme_black btn_size_l" type="submit">Войти</button>
               </div>
-            </form>
-          </div><br/><br/><br/><br/><br/><br/><br/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Попап Регистрация-->
+      <div class="footer-popup-form" id="popup-signup" data-popup-modal="data-popup-modal">
+        <div class="footer-popup-form__title"></div>
+        <div class="footer-popup-form__title"><span>
+             Зарегистрироваться </span>или
+          <div class="footer-popup-form__title_link" data-popup="#popup-signin">
+             войти</div>
+        </div>
+        <div class="footer-popup-form__wrapper">
+          <form class="footer-popup-form__form" action="?" method="POST">
+            <div class="footer-popup-form__form_column">
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
+                <label class="footer-popup-form__form_label">Email</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="fio" data-validation="required"/>
+                <label class="footer-popup-form__form_label">ФИО</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="org" data-validation="required"/>
+                <label class="footer-popup-form__form_label">Организация</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="address" data-validation="required"/>
+                <label class="footer-popup-form__form_label">Адрес магазина</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="city" data-validation="required"/>
+                <label class="footer-popup-form__form_label">Город</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="phone-number" data-validation="length number" data-validation-length="10-11" data-validation-ignore="+"/>
+                <label class="footer-popup-form__form_label">Телефон</label>
+              </div>
+              <!-- TODO: чтобы Подтверждение пароля работало исправно, в поле 'data-validation-confirm'-->
+              <!-- должно быть name от input, то есть pass_validate-->
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="password" name="pass_validate" data-validation="length" data-validation-length="min6"/>
+                <label class="footer-popup-form__form_label footer-popup-form__form_label--fix-top">Пароль<span class="footer-popup-form__form_label-help"><br/>( не менее 6 символов )</span></label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input last-input">
+                <input class="footer-popup-form__form_field" type="password" name="password_confirmation" data-validation="confirmation length" data-validation-confirm="pass_validate" data-validation-length="min6"/>
+                <label class="footer-popup-form__form_label">Подтверждение пароля</label>
+              </div>
+              <div class="footer-popup-form__form_group">
+                <div class="footer-popup-form__form_subfield-text">Все поля обязательны для заполнения.</div>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                <button class="btn btn_theme_black btn_size_l" type="submit">Регистрация</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Попап Забыли пароль-->
+      <div class="footer-popup-form" id="popup-remind-password" data-popup-modal="data-popup-modal">
+        <div class="footer-popup-form__title"><span>Забыли пароль?</span>
+          <div class="footer-popup-form__title_subtitle">Укажите адрес электронной почты или номер телефона, указанные вами при регистрации</div>
+        </div>
+        <div class="footer-popup-form__wrapper">
+          <form class="footer-popup-form__form" action="?" method="POST">
+            <div class="footer-popup-form__form_column">
+              <div class="footer-popup-form__form_group footer-popup-form__form_input last-input">
+                <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
+                <label class="footer-popup-form__form_label">Email</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                <button class="btn btn_theme_black btn_size_l" type="submit">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Попап Заказать звонок-->
+      <div class="footer-popup-form" id="popup-request-call" data-popup-modal="data-popup-modal">
+        <div class="footer-popup-form__title"><span>Заказать звонок</span></div>
+        <div class="footer-popup-form__wrapper">
+          <form class="footer-popup-form__form" action="?" method="POST">
+            <div class="footer-popup-form__form_column">
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="email" data-validation="email"/>
+                <label class="footer-popup-form__form_label">ФИО</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input">
+                <input class="footer-popup-form__form_field" type="text" name="phone-number" data-validation="length number" data-validation-length="10-11" data-validation-ignore="+"/>
+                <label class="footer-popup-form__form_label">Телефон</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_input last-input">
+                <textarea class="footer-popup-form__form_textarea" name="comment" rows="6"></textarea>
+                <label class="footer-popup-form__form_label">Комментарий</label>
+              </div>
+              <div class="footer-popup-form__form_group footer-popup-form__form_submit">
+                <button class="btn btn_theme_gray btn_size_m" type="submit">Отменить</button>
+                <button class="btn btn_theme_black btn_size_m" type="button" data-popup="#popup-request-call">Заказать</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

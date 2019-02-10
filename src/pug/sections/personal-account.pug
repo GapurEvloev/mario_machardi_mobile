@@ -63,26 +63,26 @@ mixin personal-account(authorized, adminAccount)
 
 		.footer-popup-form__wrapper
 			form.footer-popup-form__form(action='?' method='POST')
-				.footer-popup-form__form_columns
+				
 
-					.footer-popup-form__form_column
-						.footer-popup-form__form_group.footer-popup-form__form_group_center
-							label.footer-popup-form__form_label
-								img(src="static/i/general/svg/login-icon.svg", alt="Логин")
-								input.footer-popup-form__form_field(placeholder="Логин" type='text' name='login' data-validation='required')
+				.footer-popup-form__form_column
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field.sign-in-field(placeholder="Логин" type='text' name='login' data-validation='required')
+						label.footer-popup-form__form_label
+							img(src="static/i/general/svg/login-icon.svg", alt="Логин")
 
-					.footer-popup-form__form_column
-						.footer-popup-form__form_group.footer-popup-form__form_group_center
-							label.footer-popup-form__form_label
-								img(src="static/i/general/svg/pass-icon.svg", alt="Пароль")
-								input.footer-popup-form__form_field(placeholder="Пароль" type='password' name='password' data-validation='length' data-validation-length='min6')
-							
-							.footer-popup-form__form_subfield-link(data-popup='#popup-remind-password')
-								| Забыли пароль?
+					.footer-popup-form__form_group.footer-popup-form__form_input.last-input
+						input.footer-popup-form__form_field.sign-in-field(placeholder="Пароль" type='password' name='password' data-validation='length' data-validation-length='min6')
+						label.footer-popup-form__form_label
+							img(src="static/i/general/svg/pass-icon.svg", alt="Пароль")
+					
+					.footer-popup-form__form_group
+						.footer-popup-form__form_subfield-link(data-popup='#popup-remind-password')
+							| Забыли пароль?
 
-				.footer-popup-form__form_group.footer-popup-form__form_submit
-					button.btn.btn_theme_black.btn_size_m(type='submit')
-						| Войти
+					.footer-popup-form__form_group.footer-popup-form__form_submit
+						button.btn.btn_theme_black.btn_size_l(type='submit')
+							| Войти
 
 
 	// Попап Регистрация
@@ -99,62 +99,65 @@ mixin personal-account(authorized, adminAccount)
 			form.footer-popup-form__form(action='?' method='POST')
 				.footer-popup-form__form_column
 
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='email' data-validation='email')
 						label.footer-popup-form__form_label
 							| Email
-						input.footer-popup-form__form_field(type='text' name='email' data-validation='email')
 
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='fio' data-validation='required')
 						label.footer-popup-form__form_label
 							| ФИО
-						input.footer-popup-form__form_field(type='text' name='fio' data-validation='required')
 
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='org' data-validation='required')
 						label.footer-popup-form__form_label
 							| Организация
-						input.footer-popup-form__form_field(type='text' name='org' data-validation='required')
 
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='address' data-validation='required')
 						label.footer-popup-form__form_label
 							| Адрес магазина
-						input.footer-popup-form__form_field(type='text' name='address' data-validation='required')
 
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='city' data-validation='required')
 						label.footer-popup-form__form_label
 							| Город
-						input.footer-popup-form__form_field(type='text' name='city' data-validation='required')
-					.footer-popup-form__form_group
+					
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
 						label.footer-popup-form__form_label
 							| Телефон
-						input.footer-popup-form__form_field(type='text' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
 					
 					// TODO: чтобы Подтверждение пароля работало исправно, в поле 'data-validation-confirm'
 					// должно быть name от input, то есть pass_validate
-					.footer-popup-form__form_group
-						label.footer-popup-form__form_label
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='password' name='pass_validate' data-validation='length' data-validation-length='min6')
+						label.footer-popup-form__form_label.footer-popup-form__form_label--fix-top
 							| Пароль
 							span.footer-popup-form__form_label-help
+								br
 								| ( не менее 6 символов )
-						input.footer-popup-form__form_field(type='password' name='pass_validate' data-validation='length' data-validation-length='min6')
 					
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input.last-input
+						input.footer-popup-form__form_field(type='password' name='password_confirmation' data-validation='confirmation length' data-validation-confirm='pass_validate' data-validation-length='min6')
 						label.footer-popup-form__form_label
 							| Подтверждение пароля
-						input.footer-popup-form__form_field(type='password' name='password_confirmation' data-validation='confirmation length' data-validation-confirm='pass_validate' data-validation-length='min6')
 			
-					.footer-popup-form__form_group.footer-popup-form__form_group_center
+					.footer-popup-form__form_group
 						.footer-popup-form__form_subfield-text
-							| Все поля, обязательны для заполнения.
+							| Все поля обязательны для заполнения.
 			
 					.footer-popup-form__form_group.footer-popup-form__form_submit
-						button.btn.btn_theme_black.btn_size_m(type='submit')
+						button.btn.btn_theme_black.btn_size_l(type='submit')
 							| Регистрация
 
 
 	// Попап Забыли пароль
 	.footer-popup-form(id='popup-remind-password' data-popup-modal)
 		.footer-popup-form__title
-			| Забыли пароль?
+			span
+				| Забыли пароль?
 			.footer-popup-form__title_subtitle
 				| Укажите адрес электронной почты или номер телефона, указанные вами при регистрации
 		
@@ -162,50 +165,44 @@ mixin personal-account(authorized, adminAccount)
 			form.footer-popup-form__form(action='?' method='POST')
 
 				.footer-popup-form__form_column
-					.footer-popup-form__form_group.footer-popup-form__form_group_center
-						label.footer-popup-form__form_label
-							| Email
+					.footer-popup-form__form_group.footer-popup-form__form_input.last-input
 						input.footer-popup-form__form_field(type='text' name='email'
 						data-validation='email')
+						label.footer-popup-form__form_label
+							| Email
 				
 					.footer-popup-form__form_group.footer-popup-form__form_submit
-						button.btn.btn_theme_black.btn_size_m(type='submit')
+						button.btn.btn_theme_black.btn_size_l(type='submit')
 							| Отправить
 
 
 	// Попап Заказать звонок
 	.footer-popup-form(id='popup-request-call' data-popup-modal)
 		.footer-popup-form__title
-			| Заказать звонок
+			span
+				| Заказать звонок
 		.footer-popup-form__wrapper
 			form.footer-popup-form__form(action='?' method='POST')
 
-					.footer-popup-form__form_column
-						.footer-popup-form__form_group
-							label.footer-popup-form__form_label
-								| ФИО
-							input.footer-popup-form__form_field(type='text' name='email' data-validation='email')
+				.footer-popup-form__form_column
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='email' data-validation='email')
+						label.footer-popup-form__form_label
+							| ФИО
 					
-					.footer-popup-form__form_column
-						.footer-popup-form__form_group
-							label.footer-popup-form__form_label
-								| Телефон
-							input.footer-popup-form__form_field(type='text' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
+						label.footer-popup-form__form_label
+							| Телефон
 
-					.footer-popup-form__form_group
+					.footer-popup-form__form_group.footer-popup-form__form_input.last-input
+						textarea.footer-popup-form__form_textarea(name='comment' rows='6')
 						label.footer-popup-form__form_label
 							| Комментарий
-						textarea.footer-popup-form__form_textarea(name='comment' rows='6')
 
 					.footer-popup-form__form_group.footer-popup-form__form_submit
-						button.btn.btn_theme_black.btn_size_m(type='submit')
-							| Заказать
-						button.btn.btn_theme_black.btn_size_m(type='button' data-popup='#popup-request-call')
+						button.btn.btn_theme_gray.btn_size_m(type='submit')
 							| Отменить
-		br
-		br
-		br
-		br
-		br
-		br
-		br
+						button.btn.btn_theme_black.btn_size_m(type='button' data-popup='#popup-request-call')
+							| Заказать
+

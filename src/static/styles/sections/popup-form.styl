@@ -1,0 +1,111 @@
+// Popup forms
+.footer
+	&-popup
+		&-form
+			padding 0 30px
+			margin-bottom 100px
+			
+			&__title
+				text-align center
+				font-size 21px
+				font-weight normal
+				color $black
+				line-height 25px
+				margin-bottom 30px
+				
+				&_subtitle
+					font-size 14px
+					font-weight lighter
+					line-height 19px
+				
+				span
+					display block
+					font-weight bold
+					font-size 26px
+				
+				&_link
+					display inline-block
+					font-weight bold
+					color $signBlue
+			
+			&__form	
+				//
+				
+				&_label
+					width auto
+					position absolute
+					margin-bottom 0
+					top 17px
+					left 20px
+					font-weight lighter
+					display inline-block
+					z-index -1
+					
+					&--fix-top
+						top 12px
+						
+					&-help
+						font-size 10px
+					
+				img
+					margin-left 10px
+					width 15px
+					height 15px
+					
+				
+				&_field
+					&.sign-in-field
+						padding-left 60px
+					width 100%
+					height 50px
+					padding 15px 0 15px 20px
+					border 1px solid $gray-200
+					box-shadow none
+					font-size 14px
+					font-weight lighter
+					position relative
+					background-color transparent
+					
+				&_textarea
+					width 100%
+					border 1px solid $gray-200
+					padding 15px 0 15px 20px
+					position relative
+					background-color transparent
+				
+				&_input
+					margin-bottom 27px
+					position relative
+					&.last-input
+						margin-bottom 11px
+				
+				&_submit
+					margin-top 22px
+					display -webkit-flex
+					display -moz-flex
+					display -ms-flex
+					display -o-flex
+					display flex
+					justify-content space-between
+				
+				&_subfield
+					&-link,
+					&-text
+						font-size 14px
+						font-weight normal
+						color $signBlue
+						text-align center
+					&-text
+						color $gray-100
+
+				&_field,
+				&_textarea
+					&:focus
+						padding-left 20px
+						&~.footer-popup-form__form_label
+							display none
+
+// .group_input
+// 	margin-bottom 27px
+// 	&:last-child
+// 		margin-bottom 11px

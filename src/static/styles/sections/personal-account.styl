@@ -10,7 +10,7 @@
   display: flex
   align-items center
   justify-content space-around
-  margin-left: calc(var(--grid-gutter-width) / -2);
+  // margin-left: calc(var(--grid-gutter-width) / -2);
   
   &__bottom
     margin 0
@@ -67,43 +67,4 @@
 
     &_bold
       font-weight 700
-
-
-
-    & .rub
-      display inline-block
-      margin 0 5px 0 5px
-      vertical-align middle
-
-    .windows & .rub
-      margin-top -7px
-
-    .windows & .rub + &_unbold
-      margin-top -2px
-
-    & .icons__icon-basket
-      margin-top -2px
-
-    .windows & .icons__icon-basket
-      margin-top -4px
-
-    & [data-popup]
-      position relative
-
-      &:after
-        background-color black
-        bottom 0
-        content ''
-        display block
-        height 0
-        position absolute
-        transition height 0.1s ease-out
-        width 100%
-        z-index 3
-
-    & .popup-link-active
-      color black
-
-      &:after
-        height 3px
 

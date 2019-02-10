@@ -9,7 +9,38 @@
 //   @media (min-width: $grid-md)
 //     font-size 1.2rem
 
-// .btn-bordered
+.btn
+	border-radius 2px
+	line-height 34px
+	// font-family "SF UI Text"
+	font-weight bold
+	font-size 21px
+	// transition all 50ms easy
+	color $white
+	&:focus
+		outline none
+		box-shadow: 0px 0px 4px 2px rgba(204,204,204,1)
+	
+	&:active
+		transform scale(.95)
+	
+	&_theme_black
+		color $white
+		background-color $black
+	
+	&_theme_gray
+		background-color $gray-300
+		color $white
+		&:active,
+		&:hover
+			background-color $black
+		
+	&_size
+		&_m
+			width 48%
+		&_l
+			width 100%
+
 //   border-color #fff
 //   color #fff !important
 //   // height 38px

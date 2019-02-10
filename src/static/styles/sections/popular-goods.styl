@@ -7,64 +7,6 @@
   &__title
     margin-bottom 35px
 
-  &__dropdown
-    margin 0 auto
-    width 200px
-
-    &_button
-      background none
-      border none
-      font-size 14px
-      font-weight 100
-      text-align center
-      width 100%
-
-      & .fa
-        display inline-block
-        font-size 18px
-        font-weight 900
-        margin 1px 0 0 5px
-        vertical-align top
-
-    &_menu
-      border-radius 0
-      box-shadow 0 2px 4px alpha(black, 0.1)
-      left 0
-      margin 0 auto
-      max-width 160px
-      right 0
-
-    &_menu-item
-      cursor pointer
-      display block
-      padding 4px 10px
-      position relative
-      transition color 0.15s 0.1s ease-out
-      text-align center
-
-      &:hover
-        color #d10909
-
-      &:before,
-      &:after
-        background-color alpha(black, 0.02)
-        content ''
-        height 0
-        left 0
-        position absolute
-        transition height 0.15s 0.05s ease-out
-        width 100%
-
-      &:before
-        top 0
-
-      &:after
-        bottom 0
-
-      &:hover:before,
-      &:hover:after
-        height 100%
-
   &__slider
     margin-top 15px
     position: relative
@@ -90,7 +32,7 @@
           content ''
           position: absolute
           width 20px
-          height 30px
+          height 20px
           top 50%
           background-image: url(../i/general/svg/slider-arrow.svg)
           background-size: contain
