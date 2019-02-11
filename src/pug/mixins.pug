@@ -5,6 +5,8 @@ include sections/innovations
 include sections/novelty
 include sections/wholesale-buyers
 include sections/personal-account
+include sections/products
+include sections/shops
 
 mixin icon(name, mod)
 	if (typeof mod !== "undefined")
@@ -13,3 +15,9 @@ mixin icon(name, mod)
 		- mod = ''
 	svg(class="icon icon-" + name + mod)
 		use(xlink:href="static/i/svg/symbol/sprite.svg#icon-" + name)
+
+mixin pageTitle(text)
+	//Page title
+	section.section.section--page-title
+		.container
+			h2.page-title!=text

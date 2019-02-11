@@ -7,7 +7,7 @@ section.section.section--drop-descr
 
         each item in items
           .drop-descr-item
-            .drop-descr-item__head(id=!"drop-descr-heading-"+item.collapse_attr)
+            .drop-descr-item__head
               button.drop-descr-item__link.collapsed(type="button" data-target="#drop-descr-collapse-"+item.collapse_attr data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-"+item.collapse_attr)
                 .drop-descr-item__link-inner
                   img(class="icon icon--"+item.icon src="static/i/general/svg/"+item.icon+".svg" alt=item.name)

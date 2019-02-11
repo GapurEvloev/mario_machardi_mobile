@@ -17,15 +17,15 @@ $(document).ready(function() {
       nav:false,
       dots: true,
       responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:1
-          },
-          1000:{
-              items:1
-          }
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
       }
     });
     // main carousel end
@@ -37,15 +37,35 @@ $(document).ready(function() {
       nav:true,
       dots: false,
       responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:5
-          }
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:5
+        }
+      }
+    });
+    // popular-goods carousel end
+
+    // popular-goods carousel start
+    $('.products__slider').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      dots: false,
+      responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
       }
     });
     // popular-goods carousel end
@@ -53,47 +73,143 @@ $(document).ready(function() {
   });
 // owl-carousels end
 
-
-
 // Script for audio start
 $(function () {
-    $('[play-audio-link]').on('click', function () {
-        $('#player')[0].play();
+  $('[play-audio-link]').on('click', function () {
+    $('#player')[0].play();
 
-        $('[play-audio]').addClass('hide').removeClass('show');
-        $('[pause-audio]').addClass('show').removeClass('hide');
-    });
+    $('[play-audio]').addClass('hide').removeClass('show');
+    $('[pause-audio]').addClass('show').removeClass('hide');
+  });
 
-    $('[play-audio]').on('click', function () {
-        $('#player')[0].play();
+  $('[play-audio]').on('click', function () {
+    $('#player')[0].play();
 
-        $('[play-audio]').toggleClass('show').toggleClass('hide');
-        $('[pause-audio]').toggleClass('show').toggleClass('hide');
-    });
+    $('[play-audio]').toggleClass('show').toggleClass('hide');
+    $('[pause-audio]').toggleClass('show').toggleClass('hide');
+  });
 
-    $('[pause-audio]').on('click', function () {
-        $('#player')[0].pause();
+  $('[pause-audio]').on('click', function () {
+    $('#player')[0].pause();
 
-        $('[play-audio]').toggleClass('show').toggleClass('hide');
-        $('[pause-audio]').toggleClass('show').toggleClass('hide');
-    });
+    $('[play-audio]').toggleClass('show').toggleClass('hide');
+    $('[pause-audio]').toggleClass('show').toggleClass('hide');
+  });
 });
 'use strict';
 // Script for audio end
 
 // JavaScript for label effects only
 $(function () {
-    $(".footer-popup-form__form_input input").val("");
-    
-    $(".footer-popup-form__form_input input").focusout(function(){
-      if($(this).val() != ""){
-        $(this).addClass("has-content");
-      }else{
-        $(this).removeClass("has-content");
-      }
-    });
+  $(".footer-popup-form__form_input input").val("");
+  $(".footer-popup-form__form_input textarea").val("");
+  
+  $(".footer-popup-form__form_input input").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });
+
+  $(".footer-popup-form__form_input textarea").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });  
 });    
-// JavaScript for label effects only
+// JavaScript for label effects only end
+
+// popup js start
+$(function () {
+  $('[data-popup]').on('click', function () {
+    var self = $(this),
+        idModal = self.attr('data-popup');
+
+    if (!$(idModal).hasClass('popup-open')) {
+        $('.popup-open').removeClass('popup-open');
+    }
+
+    if (!self.hasClass('popup-link-active')) {
+        $('.popup-link-active').removeClass('popup-link-active');
+    }
+
+    $('[data-popup="' + idModal + '"]').toggleClass('popup-link-active');
+    $(idModal).toggleClass('popup-open');
+
+    //if ($(idModal).hasClass('popup-open')) {
+    //console.log($(window).scrollTop());
+    // if ($(window).scrollTop() >= 300) {
+
+    //   if (!$(idModal).hasClass('popup-open')) {
+    //       $(idModal).addClass('popup-open');
+    //   }
+    //   if (!self.hasClass('popup-link-active')) {
+    //       $('[data-popup="' + idModal + '"]').addClass('popup-link-active');
+    //   }
+
+    //   // $("body,html").animate({
+    //   //     scrollTop: 0
+    //   // }, 800);
+    // }
+    //}
+  });
+
+  $(document).on('click', function (event) {
+    if ($(event.target).closest('.popup-open, .popup-link-active').length) return;
+
+    $('.popup-link-active').toggleClass('popup-link-active');
+    $('.popup-open').toggleClass('popup-open');
+    event.stopPropagation();
+  });
+
+  $(document).on('keyup', function (event) {
+    if (event.keyCode == 27) {
+      $('.popup-link-active').toggleClass('popup-link-active');
+      $('.popup-open').toggleClass('popup-open');
+    }
+  });
+});
+'use strict';
+// popup js end
+
+//Add div for popup bg
+$('.footer-fixed').append("<div class='fix-bg'></div>");
+//Add div for popup bg end
+
+//shops map js start
+$(function () {
+    $('[toggle-info-shop]').on('click', function () {
+        let self = $(this),
+            mapElement = self.parent().find('.shops__info-shop_map'),
+            idMap = mapElement.attr('id'),
+            mapData = mapsData[idMap];
+
+        if (!mapElement.hasClass('map-init')) {
+            // Инициализация Yandex.Map
+            var myMap = new ymaps.Map(idMap, {
+                    center: mapData.center,
+                    zoom: mapData.zoom
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                objectManager = new ymaps.ObjectManager({
+                    clusterize: true,
+                    gridSize: 32
+                });
+
+            objectManager.objects.options.set('preset', 'islands#blueDotIcon');
+            objectManager.clusters.options.set('preset', 'islands#blueClusterIcons');
+            myMap.geoObjects.add(objectManager);
+
+            objectManager.add(mapData.map_data);
+            mapElement.addClass('map-init');
+        }
+    });
+});
+//shops js end
 
 // var delay = (function() {
 //   var timer = 0;

@@ -1,0 +1,9 @@
+extends ../layout/main
+
+block variables
+	- var title = "Магазины — Mario Machardi"
+
+block content
+	+pageTitle("Магазины")
+	+shops()
+	script(src='https://api-maps.yandex.ru/2.1/?apikey=74faef53-f6a9-46af-8820-4a189f368bf7&lang=ru_RU' async)

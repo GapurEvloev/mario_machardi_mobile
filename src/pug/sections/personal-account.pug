@@ -4,9 +4,9 @@ mixin personal-account(authorized, adminAccount)
 		if (authorized != true)
 			// TODO: Структура если пользователь НЕ авторизован
 			ul.personal-account__bottom
-				li.personal-account__bottom_item
+				li.personal-account__bottom_item(data-popup='#popup-signin')
 					img(src="static/i/general/svg/sign-icon.svg", alt="Войти")
-					.personal-account__bottom_link(data-popup='#popup-signin')
+					.personal-account__bottom_link
 						
 						| Войти
 				li.personal-account__bottom_item
@@ -14,9 +14,9 @@ mixin personal-account(authorized, adminAccount)
 					a.personal-account__bottom_link(href='/basket/')
 						
 						| Корзина
-				li.personal-account__bottom_item
+				li.personal-account__bottom_item(data-popup='#popup-request-call')
 					img(src="static/i/general/svg/request-call.svg", alt="Заказать звонок")
-					.personal-account__bottom_link.personal-account__bottom_request-call(data-popup='#popup-request-call')
+					.personal-account__bottom_link.personal-account__bottom_request-call
 						| Заказать звонок
 
 		if (authorized == true)

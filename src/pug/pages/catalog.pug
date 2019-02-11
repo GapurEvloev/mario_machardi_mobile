@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block variables
+  - var title = "Продукция — Mario Machardi"
+
+block content
+  +pageTitle("Продукция")
+  +products()
+
+      // .pagination
+      //   - var page = 0
+      //   while page < 5
+      //     - page++
+      //     a.pagination__link(href="#" class=(page == 1) ? "active" : "")= page
+      // form.articles-search
+      //   +icon("search-2")
+      //   label.sr-only(for="") Search
+      //   input.form-control(type="search" id="" placeholder="Search")
