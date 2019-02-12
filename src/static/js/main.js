@@ -140,7 +140,7 @@ $(function () {
         $(idModal).toggleClass('popup-open');
     });
 
-    $document.on('click', function (event) {
+    $(document).on('click', function (event) {
         if ($(event.target).closest('.popup-open, .popup-link-active').length) return;
 
         $('.popup-link-active').toggleClass('popup-link-active');
@@ -148,7 +148,7 @@ $(function () {
         event.stopPropagation();
     });
 
-    $document.on('keyup', function (event) {
+    $(document).on('keyup', function (event) {
         if (event.keyCode == 27) {
             $('.popup-link-active').toggleClass('popup-link-active');
             $('.popup-open').toggleClass('popup-open');
