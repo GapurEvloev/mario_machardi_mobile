@@ -428,7 +428,3 @@ $(function () {
 //   }
 // }
 
-// function navMenuFix(el) {
-//   var $link = $(el).find('.nav-link');
-//   $link.attr('data-toggle', $(window).width() < 768 ? 'collapse' : '');
-// }

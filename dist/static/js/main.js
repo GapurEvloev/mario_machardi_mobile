@@ -139,23 +139,6 @@ $(function () {
     $('[data-popup="' + idModal + '"]').toggleClass('popup-link-active');
     $(idModal).toggleClass('popup-open');
 
-    //if ($(idModal).hasClass('popup-open')) {
-    //console.log($(window).scrollTop());
-    // if ($(window).scrollTop() >= 300) {
-
-    //   if (!$(idModal).hasClass('popup-open')) {
-    //       $(idModal).addClass('popup-open');
-    //   }
-    //   if (!self.hasClass('popup-link-active')) {
-    //       $('[data-popup="' + idModal + '"]').addClass('popup-link-active');
-    //   }
-
-    //   // $("body,html").animate({
-    //   //     scrollTop: 0
-    //   // }, 800);
-    // }
-    //}
-  });
 
   $(document).on('click', function (event) {
     if ($(event.target).closest('.popup-open, .popup-link-active').length) return;
@@ -179,6 +162,7 @@ $(function () {
 $('.footer-fixed').append("<div class='fix-bg'></div>");
 //Add div for popup bg end
 
+//shops js start
 //shops map js start
 $(function () {
     $('[toggle-info-shop]').on('click', function () {
@@ -209,6 +193,8 @@ $(function () {
         }
     });
 });
+//shops map js
+
 //shops js end
 
 // var delay = (function() {
@@ -442,7 +428,3 @@ $(function () {
 //   }
 // }
 
-// function navMenuFix(el) {
-//   var $link = $(el).find('.nav-link');
-//   $link.attr('data-toggle', $(window).width() < 768 ? 'collapse' : '');
-// }
