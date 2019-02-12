@@ -4,7 +4,7 @@
   margin-top 25px
 
   &__alphabet
-    margin-bottom 35px
+    margin-bottom 37px
     text-align center
 
     &_all
@@ -105,3 +105,81 @@
 
     &_map
       margin-top 40px
+      
+//Select filter sizes
+$select-width = 142.5px;
+$select-height = 40px;       
+
+.select
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight normal
+  color: $bodyColor;
+  width: $select-width;
+  height: $select-height;
+  
+  &-hidden
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  
+  &-styled
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    line-height 1.6
+    background-color: $select-background;
+    padding: 8px 15px;
+    transition all 0.2s ease-in
+    border 1px solid $gray-200
+    text-indent: -10px;
+  
+    &:after
+      content:"";
+      width: 8px;
+      height: 8px;
+      border: 2px solid transparent;
+      border-color: $black $black transparent transparent;
+      border-radius 2px
+      position: absolute;
+      top: 47%;
+      right: 10px;
+      transition all 200ms linear
+      transform translateY(-50%)rotate(135deg)
+
+    &.active
+      border-bottom: none
+      &:after
+        top 60%
+        transform translateY(-50%)rotate(-45deg)
+
+
+.select-options 
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $formFill
+  li 
+    margin: 0;
+    text-align: center
+    padding: 12px 0;
+    border: 1px solid $gray-200
+    border-bottom: none
+    transition all 0.15s ease-in-out
+    
+    &:last-child
+      border-bottom 1px solid $gray-200
+    
+    &[rel="hide"]
+      display: none
+      

@@ -1,6 +1,6 @@
-mixin alphabetItems(array)
-  each item in array
-    a.shops__alphabet_item(href='#')= item
+//- mixin alphabetItems(array)
+//-   each item in array
+//-     a.shops__alphabet_item(href='#')= item
 
 mixin shopCity(options)
   .shops__info-shop_item(id=!"drop-descr-heading-"+options.idMap)
@@ -50,10 +50,31 @@ mixin shops()
     .container
       .shops
         .shops__alphabet
-          a.shops__alphabet_all(href='#')
-            | Все
-          .shops__alphabet_items
-            +alphabetItems(['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т'])
+          select#alphabet
+            option(value="All") Все магазины
+            option(value="А") А
+            option(value="Б") Б
+            option(value="В") В
+            option(value="Г") Г
+            option(value="Д") Д
+            option(value="Е") Е
+            option(value="Ё") Ё
+            option(value="Ж") Ж
+            option(value="З") З
+            option(value="И") И
+            option(value="К") К
+            option(value="Л") Л
+            option(value="М") М
+            option(value="Н") Н
+            option(value="О") О
+            option(value="П") П
+            option(value="Р") Р
+            option(value="С") С
+            option(value="Т") Т
+          //- a.shops__alphabet_all(href='#')
+          //-   | Все
+          //- .shops__alphabet_items
+          //-   +alphabetItems(['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т'])
 
         .shops__info-shop#drop-descr
 
