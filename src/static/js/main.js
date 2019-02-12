@@ -124,36 +124,37 @@ $(function () {
 
 // popup js start
 $(function () {
-  $('[data-popup]').on('click', function () {
-    var self = $(this),
-        idModal = self.attr('data-popup');
+    $('[data-popup]').on('click', function () {
+        var self = $(this),
+            idModal = self.attr('data-popup');
 
-    if (!$(idModal).hasClass('popup-open')) {
-        $('.popup-open').removeClass('popup-open');
-    }
+        if (!$(idModal).hasClass('popup-open')) {
+            $('.popup-open').removeClass('popup-open');
+        }
 
-    if (!self.hasClass('popup-link-active')) {
-        $('.popup-link-active').removeClass('popup-link-active');
-    }
+        if (!self.hasClass('popup-link-active')) {
+            $('.popup-link-active').removeClass('popup-link-active');
+        }
 
-    $('[data-popup="' + idModal + '"]').toggleClass('popup-link-active');
-    $(idModal).toggleClass('popup-open');
+        $('[data-popup="' + idModal + '"]').toggleClass('popup-link-active');
+        $(idModal).toggleClass('popup-open');
+    });
 
+    $document.on('click', function (event) {
+        if ($(event.target).closest('.popup-open, .popup-link-active').length) return;
 
-  $(document).on('click', function (event) {
-    if ($(event.target).closest('.popup-open, .popup-link-active').length) return;
+        $('.popup-link-active').toggleClass('popup-link-active');
+        $('.popup-open').toggleClass('popup-open');
+        event.stopPropagation();
+    });
 
-    $('.popup-link-active').toggleClass('popup-link-active');
-    $('.popup-open').toggleClass('popup-open');
-    event.stopPropagation();
-  });
+    $document.on('keyup', function (event) {
+        if (event.keyCode == 27) {
+            $('.popup-link-active').toggleClass('popup-link-active');
+            $('.popup-open').toggleClass('popup-open');
+        }
+    });
 
-  $(document).on('keyup', function (event) {
-    if (event.keyCode == 27) {
-      $('.popup-link-active').toggleClass('popup-link-active');
-      $('.popup-open').toggleClass('popup-open');
-    }
-  });
 });
 'use strict';
 // popup js end
@@ -428,3 +429,7 @@ $(function () {
 //   }
 // }
 
+// function navMenuFix(el) {
+//   var $link = $(el).find('.nav-link');
+//   $link.attr('data-toggle', $(window).width() < 768 ? 'collapse' : '');
+// }
