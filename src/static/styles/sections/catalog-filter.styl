@@ -1,0 +1,409 @@
+.section--catalog-filter
+  padding 20px 0
+
+.catalog-filter
+  
+  // начало стилей для попап фильтра
+  &-popup
+    
+    &#filter-popup
+      display: none
+      position: fixed
+      z-index 9 
+      top 0
+
+      &.popup-open
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 11;
+        padding-top: 30px;
+        max-height: 100%;
+        overflow-y: scroll;
+        margin-bottom 50px
+    
+    &__wrapper
+      padding 20px 12px
+      background-color: $filter-bg 
+    
+  &__filters
+    
+    &_group
+      
+      &_title
+        font-size 14px
+        font-weight bold
+        line-height 18px
+        text-transform: uppercase 
+        text-indent 1px
+        margin-bottom 19px
+        
+      &.style,
+      &.processing
+        margin-bottom 23px
+      
+      &.sizes
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        align-items flex-start
+        margin-bottom 10px
+
+        .catalog-filter
+          
+          &__filters
+           
+            &_group
+              &_title
+                flex-basis 100%
+            
+            &_list
+              &.sizes-number
+                flex-basis 60%
+                flex-wrap wrap
+                justify-content flex-start
+            
+            &__item
+              flex-basis 20%
+              margin-bottom 10px
+
+            
+            &_list
+              &.sezes-letter
+                flex-basis 37%
+                flex-wrap wrap
+                justify-content flex-end
+                align-items flex-start
+                
+                .catalog-filter
+                  
+                  &__filters__item
+                    flex-basis 33%
+                    max-height 42px
+                    
+                  &__checkbox
+                    align-items flex-end
+                    
+                    img
+                      left 20px
+                      top 6px
+                    
+                    &:before
+                      right 0
+                      left inherit 
+      
+      &.color
+        margin-bottom 25px
+        
+        .catalog-filter
+          
+          &__filters
+            
+            &_list
+              flex-wrap wrap
+              
+            &__item
+              flex-basis calc(100%/8)
+          
+          &__checkbox
+            width 20px
+            height 20px
+            margin-bottom 20px
+            
+            &_input
+              &:checked
+                .catalog-filter__checkbox_label
+                  &~img
+                    display: block
+            
+            &:before
+              background-color inherit
+              border: none
+              top -1px
+              -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2); 
+              box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2);
+      
+      &.sleeve
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        align-items center
+        margin-bottom 25px
+        
+        .catalog-filter
+          
+          &__filters
+            &_group_title
+              flex-basis 23%
+              margin-bottom 14px
+
+            &_list
+              align-items center
+              display -webkit-flex
+              display -moz-flex
+              display -ms-flex
+              display -o-flex
+              display flex
+              flex-basis 75%
+              justify-content flex-start
+              
+              .catalog-filter__filters__item
+                flex-basis auto
+                &:first-child
+                  margin-right 21px
+          
+          &__checkbox
+            flex-direction row
+            flex-wrap nowrap
+            align-items center
+            
+            &:before
+              top 3px
+              
+            img
+              top 8px
+            
+            &_label
+              font-size 11px
+              text-transform: uppercase
+              font-weight normal
+              margin-left 20px
+      &.range
+        margin-bottom 45px
+        
+        .catalog-filter
+          &__filters
+            &_list
+              justify-content flex-start 
+              align-items center
+          
+            &_group_title
+              flex-basis 23%
+              margin-bottom 0
+              height 40px
+              display -webkit-flex
+              display -moz-flex
+              display -ms-flex
+              display -o-flex
+              display flex
+              align-items center
+              
+            &__item
+              flex-basis 35%
+              align-items center
+              
+              &:last-child
+                margin-left 25px
+                
+              .catalog-filter__range
+                height 40px
+                margin: 0
+                display -webkit-flex
+                display -moz-flex
+                display -ms-flex
+                display -o-flex
+                display flex
+                align-items center
+                color #707070
+                line-height 21px
+                font-size 16px
+                font-weight normal
+                background-color $formFill
+                
+                &_label
+                  height 100%
+                  width 40px
+                  border: 1px solid $gray-200
+                  vertical-align middle
+                  display -webkit-flex
+                  display -moz-flex
+                  display -ms-flex
+                  display -o-flex
+                  display flex
+                  justify-content center
+                  align-items center
+                  
+                &_input
+                  height 100%
+                  width calc(100% - 40px)
+                  text-align: center
+                  background-color $formFill
+                  box-shadow none
+                  border: 1px solid $gray-200
+                  border-left none
+                  font-size 14px
+                  font-weight: bold
+      
+      &.buttons
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        justify-content space-between
+        padding 10px 0
+        
+      
+    &_list
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      justify-content space-between
+        
+    &__item
+      flex-basis 17%
+      
+      img
+        display none
+      //
+  
+  &__checkbox
+    font-size 11px
+    font-weight normal
+    line-height 22px
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    flex-direction column
+    position: relative
+    margin: 0
+    cursor: pointer
+    
+    &:before
+      content ''
+      position: absolute
+      width 25px
+      height 25px
+      background-color $white
+      border-radius 2px
+      z-index 8
+      border: 1px solid $gray-500
+      left 0
+      top 0
+
+    &_input
+      margin-bottom 17px
+      visibility: hidden
+      
+      &:checked
+        &~img,
+        &+img
+          display: block
+    
+    img
+      position: absolute
+      z-index 9
+      top 5px
+      left 5px     
+    
+    &_label
+      line-height 12px
+      
+      // конец стилей для попап фильтра
+      
+      //начало стилей для секции опций фильтра
+  &__options
+    #your-choices
+      display: none
+      &.show
+        display: block
+
+    .catalog-filter
+      
+      &__choice-options
+        
+        &__link
+          color: $blue
+          cursor: pointer
+          font-weight: bold
+          font-size 19px
+          line-height 21px
+          margin: 0 auto
+          width 80%
+          text-align: center
+          
+          &.popup-link-active
+            display: none
+          
+          &.hide
+            display: none
+            
+      &__your-choices 
+        // display: none
+        
+        &_title
+          font-size 14px
+          font-weight normal
+          margin-bottom 20px
+          
+          .global-blocks-title_text
+            width 190px
+        
+        &_item
+          margin 0 0 20px
+          display inline-block
+          font-size 16px
+          font-weight: normal
+          line-height 32px
+          text-transform: uppercase
+          color $gray-100
+          margin-right 18px
+          padding-left 20px
+          position: relative
+          cursor: pointer
+          
+          &:before
+            content ''
+            position: absolute
+            top 50%
+            left 0
+            transform translateY(-50%)
+            width 12px
+            height 12px
+            background-color transparent
+            background-image: url(../i/general/svg/reset-choise.svg)
+            background-repeat: no-repeat
+            background-size: cover
+      
+      &__options
+        
+
+        &-buttons
+          margin-top 5px
+          border-top 1px solid $gray-100
+          border-bottom 1px solid $gray-100
+          display -webkit-flex
+          display -moz-flex
+          display -ms-flex
+          display -o-flex
+          display flex
+
+        &-button
+          font-size 12px
+          font-weight normal
+          line-height 14px
+          color $blue
+          flex-basis 50%
+          margin 8px 0px
+          padding: 0 2px
+          border: none
+          background-color $white
+    
+          &:first-child
+            border-right: 1px solid $gray-100
+    
+
+
+    //конец стилей для секции опций фильтра        

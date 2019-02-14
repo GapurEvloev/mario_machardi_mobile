@@ -1,0 +1,137 @@
+mixin catalogItem(items)
+  each item in items
+    a.catalog-item(href='#')
+      .catalog-item__image
+        img(src=item.image alt=item.title)
+        span(class=""+item.class[0])
+      .catalog-item__title= item.title
+        span= item.subtitle
+      .catalog-item__price(class=""+item.class[1])= item.price
+        span.rub P
+
+mixin catalog(good)
+  if (good === 'shirts')
+    section.section.section--catalog-items
+      .container
+        .catalog-items
+          +catalogItem([{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['stock','black-price'],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900,
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['','red-price'],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['new',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['sale',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['discount',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          },{
+            image: 'static/i/content/popular-goods/good1.png',
+            class: ['',''],
+            title: 'Easy Care',
+            subtitle: 'SF28004',
+            price: 3900
+          }])

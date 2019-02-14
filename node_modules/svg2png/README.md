@@ -22,17 +22,29 @@ svg2png(sourceBuffer, { width: 300, height: 400 })
 
 This is especially useful for images without `width` or `height`s. You can even specify just one of them and (if the image has an appropriate `viewBox`) the other will be set to scale.
 
+Finally, some SVG files reference external resources using relative paths. You can set them up for correct conversion by passing the `filename` or `url` option:
+
+```js
+svg2png(sourceBuffer, { url: "https://example.com/awesomeness.svg" })
+    .then(buffer => ...)
+    .catch(e => console.error(e));
+
+svg2png(sourceBuffer, { filename: path.resolve(__dirname, "images/fun.svg") })
+    .then(buffer => ...)
+    .catch(e => console.error(e));
+```
+
 ## Sync variant
 
 There's also a sync variant, for use in your shell scripts:
 
 ```js
-const outputBuffer = svg2png.sync(sourceBuffer, optionalWidthAndOrHeight);
+const outputBuffer = svg2png.sync(sourceBuffer, options);
 ```
 
 ## How the conversion is done
 
-svg2png is built on the latest in [PhantomJS](http://phantomjs.org/) technology to render your SVGs using a headless WebKit instance. I have found this to produce much more accurate renderings than other solutions like GraphicsMagick or Inkscape. Plus, it's easy to install cross-platform due to the excellent [phantomjs](https://npmjs.org/package/phantomjs) npm package—you don't even need to have PhantomJS in your `PATH`.
+svg2png is built on the latest in [PhantomJS](http://phantomjs.org/) technology to render your SVGs using a headless WebKit instance. I have found this to produce much more accurate renderings than other solutions like GraphicsMagick or Inkscape. Plus, it's easy to install cross-platform due to the excellent [phantomjs](https://www.npmjs.com/package/phantomjs-prebuilt) npm package—you don't even need to have PhantomJS in your `PATH`.
 
 Rendering isn't perfect; we have a number of issues that are [blocked on PhantomJS](https://github.com/domenic/svg2png/labels/blocked%20on%20phantomjs) getting its act together and releasing a cross-platform version with updated WebKit.
 
@@ -42,7 +54,7 @@ Previous versions of svg2png attempted to infer a good size based on the `width`
 
 - Any `width` or `height` attributes that are in percentages are ignored and do not count for the subsequent rules.
 - The dimensions option `{ width, height }` overrides any `width` or `height` attributes in the SVG file, including for the subsequent rules. If a key is missing from the dimensions object (i.e. `{ width }` or `{ height }`) the corresponding attribute in the SVG file will be deleted.
-- `with` and `height` attributes without a `viewBox` attribute cause the output to be of those dimensions; this might crop the image or expand it with empty space to the bottom and to the right.
+- `width` and `height` attributes without a `viewBox` attribute cause the output to be of those dimensions; this might crop the image or expand it with empty space to the bottom and to the right.
 - `width` and/or `height` attributes with a `viewBox` attribute cause the image to scale to those dimensions. If the ratio does not match the `viewBox`'s aspect ratio, the image will be expanded and centered with empty space in the extra dimensions. When a `viewBox` is present, one of either `width` or `height` can be omitted, with the missing one inferred from the `viewBox`'s aspect ratio.
 - When there are neither `width` nor `height` attributes, the promise rejects.
 
@@ -68,4 +80,4 @@ Options:
 
 ## Node.js requirements
 
-svg2png uses the latest in ES2015 features, and as such requires a recent version of Node.js. Only the 5.x series onward is supported; anything lower than 5.0.0 which happens to work might break in any patch revision of svg2png and should not be used.
+svg2png uses the latest in ES2015 features, and as such requires a recent version of Node.js. Only the 6.x series onward is supported.
