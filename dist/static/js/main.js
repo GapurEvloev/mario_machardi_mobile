@@ -70,6 +70,26 @@ $(document).ready(function() {
     });
     // popular-goods carousel end
 
+    // good carousel start
+    $('.good-slider').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      dots: false,
+      responsive:{
+        0:{
+            items:1
+        },
+        568:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+      }
+    });
+    // good carousel end
+
   });
 // owl-carousels end
 
@@ -119,7 +139,28 @@ $(function () {
       $(this).removeClass("has-content");
     }
   });  
-});    
+}); 
+
+$(function () {
+  $(".basket-forms-group__item input").val("");
+  $(".basket-forms-group__item textarea").val("");
+  
+  $(".basket-forms-group__item input").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });
+
+  $(".basket-forms-group__item textarea").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });  
+});   
 // JavaScript for label effects only end
 
 // popup js start

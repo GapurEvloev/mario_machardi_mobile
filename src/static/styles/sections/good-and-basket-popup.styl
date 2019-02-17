@@ -1,0 +1,99 @@
+.section--good-added
+.section--basket-popup
+	display none
+	position fixed
+	top 0
+	left 0
+	background-color #fff
+	z-index 15
+	height 100vh
+	width 100vw
+		
+	&.popup-open
+		display block
+		
+	//
+		
+.basket-popup
+	&__wrapper
+		height 100vh
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-direction column
+		align-items center
+		justify-content center
+		position relative
+		
+	&__content
+		text-align center
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		flex-direction column
+		justify-content center
+	
+	&__title
+		font-weight bold
+		font-size 28px
+		line-height 35px
+		margin 15px 0
+		
+	&__button
+		position absolute
+		bottom 30px
+		left 50%
+		transform translateX(-50%)
+		
+		&-catalog
+			position relative
+			width 151px
+			line-height 17px
+			font-size 15px
+			font-weight bold
+	
+	&__buttons
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		position absolute
+		bottom 30px
+		left 50%
+		transform translateX(-50%)
+		justify-content space-around
+		
+		.good-added__button
+			&:first-child
+				margin-right 5px
+				text-align center
+				text-indent 5px
+				
+				&:before
+					content ''
+					position absolute
+					border: 25px solid transparent;
+					border-right: 30px solid $black
+					left: -45px
+					bottom: 50%
+					transform translateY(50%)
+			
+			&:last-child
+				
+				&:before
+					content ''
+					position absolute
+					border: 25px solid transparent;
+					border-left: 30px solid $black
+					right: -45px
+					bottom: 50%
+					transform translateY(50%)
+					
+	//
+	

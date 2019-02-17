@@ -1,0 +1,71 @@
+mixin basketGood(items)
+	each item in items
+		.busket-good
+			.busket-good__column
+				.busket-good__img
+					img(src=item.image, alt=item.title)
+				.busket-good__remove
+					button.btn.btn-circle-red#remove-good(type="button")
+						img(src="static/i/general/svg/reset-choise.svg", alt="Удалить")
+					span.remove-text Удалить
+			.busket-good__column
+				.busket-good__title!=item.title
+				.busket-good__size Размер/Сетка: 
+					span.size!=item.size
+				.busket-good__price Цена: 
+					span.price!=item.price
+					span.rub  P
+				.busket-good__quantity 
+					span Количество
+					select#alphabet.quantity(name="quantity")
+						option(value="1") 1
+						option(value="2") 2
+						option(value="3") 3
+						option(value="4") 4
+						option(value="5") 5
+						option(value="6") 6
+						option(value="7") 7
+						option(value="8") 8
+						option(value="9") 9
+						option(value="10") 10
+						option(value="11") 11
+						option(value="12") 12
+						option(value="13") 13
+						option(value="14") 14
+						option(value="15") 15
+						option(value="16") 16
+						option(value="17") 17
+						option(value="18") 18
+						option(value="19") 19
+						option(value="20") 20
+				.busket-good__sum Стоимость 
+					span.sum 3900
+					span.rub  P 
+
+
+
+
+mixin basketGoods()
+	//Моя корзина / basket-goods
+	section.section.section--busket-goods
+		.container
+			.busket-goods
+				.busket-goods__title.global-blocks-title
+					span.global-blocks-title_text Моя корзина
+				+basketGood([{
+					image: 'static/i/content/products/img_2.jpg',
+					title: 'Сорочка Mario&nbsp;Machardi CLP&nbsp;-&nbsp;30&nbsp;-&nbsp;2&nbsp;37',
+					price: 3900,
+					size: 42
+					}, {
+					image: 'static/i/content/products/img_21.jpg',
+					title: 'Жилет Mario&nbsp;Machardi',
+					price: 3900,
+					size: 42
+					}])
+				.busket-result
+					span.busket-result__title Итого
+					span.busket-result__sum 11 870
+						span.rub  р
+
+

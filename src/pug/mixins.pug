@@ -9,7 +9,11 @@ include sections/products
 include sections/shops
 include sections/goods
 include sections/catalog-filter
-
+include sections/pagination
+include sections/basket/basket-good
+include sections/basket/basket-form
+include sections/basket/basket-popup
+include sections/good
 mixin icon(name, mod)
 	if (typeof mod !== "undefined")
 		- mod = ' ' + mod

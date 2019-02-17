@@ -9,17 +9,20 @@
 		display -o-flex
 		display flex
 		flex-wrap wrap
-		justify-content space-between
+		justify-content center
 			
 	&-item
 		text-align: center
-		margin 15px 15px
+		margin 15px 0
 		font-size 16px
 		line-height 16px
+		flex-basis 50%
+		
+		@media(min-width $grid-sm)
+			flex-basis 33.33%
 
 		&__image
 			margin 0 auto 10px
-			max-width 145px
 			overflow hidden
 
 			& img

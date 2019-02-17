@@ -1,0 +1,16 @@
+mixin pagination()
+	//Pagination
+	section.section.section--pagination
+		.container
+			nav.catalog-pagination(aria-label="catalog-navigation")
+				li.catalog-pagination__item.prev
+					a.catalog-pagination__link(href="#" aria-label="Previous")
+						img(src="static/i/general/svg/slider-arrow.svg", alt="Previous")
+				li.catalog-pagination__item
+					span.catalog-pagination__link#page_number(aria-label="page_number") 1
+				li.slash /
+				li.catalog-pagination__item
+					span.catalog-pagination__link#page_quantity(aria-label="page_quantity") 10
+				li.catalog-pagination__item.next
+					a.catalog-pagination__link(href="#" aria-label="Previous")
+						img(src="static/i/general/svg/slider-arrow.svg", alt="Previous")

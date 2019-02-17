@@ -1,0 +1,103 @@
+.section--busket-goods
+	// 
+	.busket-goods
+		
+		.busket
+			&-good
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				flex-direction row
+				flex-wrap wrap	
+				padding 40px 15px 30px
+				border-bottom 1px solid $gray-100
+				
+				&__column
+					flex-basis 50%
+					max-width 50%
+					font-size 14px	
+					line-height 21px
+					position relative
+				
+				&__img
+					margin 0 25px 0 0
+					text-align center	
+					
+					
+					img
+						margin 0 auto
+						width auto
+						height auto	
+						max-width 100%
+						max-height 	175px
+				
+				&__title
+					color $black
+					font-weight normal
+					padding-right 40px
+					margin-bottom 6px	
+					
+				&__size,
+				&__price
+					color #ACACAC
+					
+					.size,
+					.price,
+					.rub
+						color $black
+						font-weight bold	
+				
+				&__quantity
+					margin-top 5px	
+					
+					span
+						color #ACACAC
+						line-height 30px	
+						
+					.select
+						.select-styled
+							text-indent 0
+				
+				&__sum
+					font-weight bold
+					margin-top 7px		
+					
+				&__remove
+					display -webkit-flex
+					display -moz-flex
+					display -ms-flex
+					display -o-flex
+					display flex	
+					align-items center
+					position absolute	
+					bottom -3px
+					left 0		
+					
+					.remove-text
+						margin-left 10px	
+						color #ACACAC
+						font-size 14px	
+						line-height 21px
+			
+			&-result
+				width 50%
+				margin-left auto
+				padding 20px 0
+				
+				&__title
+					font-size 14px
+					line-height 21px1
+					font-weight 400
+					color $black
+					text-transform uppercase
+					display block
+
+				&__sum
+					font-size 24px
+					font-weight bold
+					color $black
+					line-height 35px
+					
+					

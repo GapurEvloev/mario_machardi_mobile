@@ -1,0 +1,205 @@
+.section--basket-form
+	//
+	
+	.basket-forms
+		&__open-button
+			
+			button
+				display none
+				
+				&.collapsed
+					display inline-block
+					
+		&__title
+			padding 15px 0
+			
+			.global-blocks-title_text
+				width 190px
+		
+		&__form
+			button
+				width calc(100% - 30px)
+				margin-left 15px
+				display none
+				
+				&.collapsed
+					display inline-block
+			
+		&-group
+			padding 0 15px 15px
+			
+			&__item
+				position relative
+				margin 30px 0
+			
+			&__input	
+				width 100%
+				height 50px
+				padding 15px 0 15px 20px
+				border 1px solid $gray-200
+				box-shadow none
+				font-size 14px
+				font-weight 300
+				position relative
+				background-color $formFill
+				color $black
+			
+			&__label
+				width auto
+				position absolute
+				margin-bottom 0
+				top 19px
+				left 20px
+				font-weight 300
+				display inline-block
+				font-size 14px
+				color $black
+			
+			&__textarea
+				width 100%
+				border 1px solid $gray-200
+				padding 15px 0 15px 20px
+				position relative
+				background-color $formFill
+				font-weight 300
+				font-size 14px
+					
+			&__input,
+			&__textarea
+				&:focus,
+				&.has-content
+					padding-left 20px
+					&~.basket-forms-group__label
+						display none
+			
+			&.courier
+				
+				.select
+					width 100%
+			
+			&.delivery
+				&-method
+					margin 0 22px
+					padding-bottom 0
+					
+					.method__title
+						font-size 14px
+						font-weight bold
+							
+					.delivery-method,
+					.pay-method
+						&__item
+							display -webkit-flex
+							display -moz-flex
+							display -ms-flex
+							display -o-flex
+							display flex
+							margin 20px 0
+						
+						&__input
+							visibility hidden
+							&:checked
+								&~.delivery-method__label
+									&:before
+										box-shadow: inset 0 0 0 6px #fff;
+										background-color: $black;
+								&~.pay-method__label
+									&:before
+										box-shadow: inset 0 0 0 6px #fff;
+										background-color: $black;
+
+						&__label
+							position relative
+							top 0
+							left 30px
+							min-height 28px
+							vertical-align middle
+							display -webkit-flex
+							display -moz-flex
+							display -ms-flex
+							display -o-flex
+							display flex
+							align-items center
+							
+							&:before
+								position absolute
+								content ''
+								border-radius: 50%;
+								border: 1px solid $black
+								display: inline-block;
+								width: 28px
+								height: 28px
+								top: 45%
+								left -40px
+								cursor: pointer;
+								text-align: center;
+								transition: all 250ms ease;
+								transform translateY(-50%)
+		.registration
+			&__title
+				padding 28px 0	
+			
+			&-item
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				justify-content space-between
+				padding-bottom 15px
+				border-bottom 1px solid $gray-100
+				margin-bottom 15px
+				
+				&__text
+					vertical-align bottom
+					line-height 35px
+					
+					&.sum
+						text-transform uppercase
+						font-weight bold
+				
+				&__number
+					padding-right 2px
+					font-size 21px
+					font-weight normal
+					line-height 35px
+					
+					&.sum
+						font-weight bold
+			
+			&-group
+				margin-bottom 40px
+				
+				.registration
+					&-method
+						display -webkit-flex
+						display -moz-flex
+						display -ms-flex
+						display -o-flex
+						display flex
+						justify-content space-between
+						margin-bottom 30px
+						
+						&__text
+							flex-basis 50%
+							font-weight bold
+
+							span
+								display block
+								font-weight normal
+								
+						&__link
+							cursor pointer
+							font-weight bold
+							color $blue
+				.basket-forms-group__item
+					margin-top 50px
+					margin-bottom 5px
+					
+					&:last-child
+						margin-left 15px
+						margin-right 15px
+					
+				&.basket-forms-group
+					padding 0 0 15px
+						

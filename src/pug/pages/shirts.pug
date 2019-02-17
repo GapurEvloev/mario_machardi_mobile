@@ -1,26 +1,27 @@
 extends ../layout/main
 
 block variables
-  - var title = "Mario Machardi"
+  - var title = "Сорочки - Mario Machardi"
 
 block content
   +pageTitle("Сорочки")
   +catalog-filter()
   +catalog('shirts')
-  //Описание
+  +pagination()
+  //Описание / Drop-description
   section.section.section--drop-descr
-  .container
-    .drop-descr#drop-descr
-      .drop-descr-list
-        - var items = [ { collapse_attr: "1", name: "Мужские сорочки оптом", icon: "drop-arrow", text: "<p>Стильные, модные мужские рубашки от&nbsp;производителя из&nbsp;Италии, компании &laquo;Mario Machardi&raquo;&nbsp;&mdash; лучшее из&nbsp;возможных предложений текущего сезона.</p><p>&laquo;Mario Machardi&raquo;&nbsp;&mdash; один из&nbsp;ведущих производителей изысканных мужских рубашек, галстуков и&nbsp;аксессуаров. Российские потребители прекрасно знают эту торговую марку и&nbsp;доверяют&nbsp;ей, поскольку &laquo;Mario Machardi&raquo; успешно работает на&nbsp;российском рынке c&nbsp;1992&nbsp;года. Любой модный аксессуар из&nbsp;каталога компании становится открытием и&nbsp;во&nbsp;многом определяет тренд в&nbsp;мужской моде текущего сезона.</p><p><b>Мужские рубашки оптом</b><br/> Мужские сорочки традиционно занимают особое место в&nbsp;коллекциях &laquo;Mario Machardi&raquo;, особенно белые.</p><p>Компания &laquo;Mario Machardi&raquo; разработала одну из&nbsp;лучших схем оптовых поставок. Мужские сорочки оптом от&nbsp;производителя поставляются в&nbsp;каждый регион мира особыми партиями, в&nbsp;которых учтены специфические особенности фигуры среднего мужчины.</p><p>В&nbsp;результате оптовые партии рубашек очень хорошо раскупаются в&nbsp;розничной торговле, что способствует повышению прибылей оптовых потребителей. Соответственно, продукция бренда имеет репутацию высоколиквидного товара, что повышает взаимную выгоду от&nbsp;сотрудничества.</p><p>Мужские рубашки оптом от&nbsp;производителя&nbsp;&mdash; всегда беспроигрышный вариант: прямые торговые отношения и&nbsp;отсутствие посредников гарантируют наилучшую цену. Кроме того, компания гарантирует оптовым покупателям существенные скидки, бонусы и&nbsp;участие в&nbsp;программе лояльности.</p><p>Мужские рубашки &laquo;Mario Machardi&raquo; популярны по&nbsp;нескольким причинам:</p><ul><li>Высокое качество тканей, с&nbsp;особой тщательностью отбираемых у&nbsp;лучших мировых производителей.</li><li>Внимание модельеров к&nbsp;каждой, даже самой мелкой детали.</li><li>Соответствие каждой коллекции последним европейским модным тенденциям.</li><li>При разработке лекал&nbsp;&mdash; обязательные поправки на&nbsp;особенности фигуры среднего представителя мужского населения региона поставки.</li><li>Демократичная стоимость.</li></ul>" }]
+    .container
+      .drop-descr#drop-descr
+        .drop-descr-list
+          - var items = [ { collapse_attr: "1", name: "Мужские сорочки оптом", icon: "drop-arrow", text: "<p>Стильные, модные мужские рубашки от&nbsp;производителя из&nbsp;Италии, компании &laquo;Mario Machardi&raquo;&nbsp;&mdash; лучшее из&nbsp;возможных предложений текущего сезона.</p><p>&laquo;Mario Machardi&raquo;&nbsp;&mdash; один из&nbsp;ведущих производителей изысканных мужских рубашек, галстуков и&nbsp;аксессуаров. Российские потребители прекрасно знают эту торговую марку и&nbsp;доверяют&nbsp;ей, поскольку &laquo;Mario Machardi&raquo; успешно работает на&nbsp;российском рынке c&nbsp;1992&nbsp;года. Любой модный аксессуар из&nbsp;каталога компании становится открытием и&nbsp;во&nbsp;многом определяет тренд в&nbsp;мужской моде текущего сезона.</p><p><b>Мужские рубашки оптом</b><br/> Мужские сорочки традиционно занимают особое место в&nbsp;коллекциях &laquo;Mario Machardi&raquo;, особенно белые.</p><p>Компания &laquo;Mario Machardi&raquo; разработала одну из&nbsp;лучших схем оптовых поставок. Мужские сорочки оптом от&nbsp;производителя поставляются в&nbsp;каждый регион мира особыми партиями, в&nbsp;которых учтены специфические особенности фигуры среднего мужчины.</p><p>В&nbsp;результате оптовые партии рубашек очень хорошо раскупаются в&nbsp;розничной торговле, что способствует повышению прибылей оптовых потребителей. Соответственно, продукция бренда имеет репутацию высоколиквидного товара, что повышает взаимную выгоду от&nbsp;сотрудничества.</p><p>Мужские рубашки оптом от&nbsp;производителя&nbsp;&mdash; всегда беспроигрышный вариант: прямые торговые отношения и&nbsp;отсутствие посредников гарантируют наилучшую цену. Кроме того, компания гарантирует оптовым покупателям существенные скидки, бонусы и&nbsp;участие в&nbsp;программе лояльности.</p><p>Мужские рубашки &laquo;Mario Machardi&raquo; популярны по&nbsp;нескольким причинам:</p><ul><li>Высокое качество тканей, с&nbsp;особой тщательностью отбираемых у&nbsp;лучших мировых производителей.</li><li>Внимание модельеров к&nbsp;каждой, даже самой мелкой детали.</li><li>Соответствие каждой коллекции последним европейским модным тенденциям.</li><li>При разработке лекал&nbsp;&mdash; обязательные поправки на&nbsp;особенности фигуры среднего представителя мужского населения региона поставки.</li><li>Демократичная стоимость.</li></ul>" }]
 
-        each item in items
-          .drop-descr-item.bd-top
-            .drop-descr-item__head
-              button.drop-descr-item__link.collapsed(type="button" data-target="#drop-descr-collapse-"+item.collapse_attr data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-"+item.collapse_attr)
-                .drop-descr-item__link-inner
-                  img(class="icon icon--"+item.icon src="static/i/general/svg/"+item.icon+".svg" alt=item.name)
-                  = item.name
-            .drop-descr-item__text.collapse(id="drop-descr-collapse-"+item.collapse_attr aria-labelledby="drop-descr-heading-"+item.collapse_attr data-parent="#drop-descr")
-              .drop-descr-item__text-inner
-                != item.text
+          each item in items
+            .drop-descr-item.bd-top
+              .drop-descr-item__head
+                button.drop-descr-item__link.collapsed(type="button" data-target="#drop-descr-collapse-"+item.collapse_attr data-toggle="collapse" aria-expanded="false" aria-controls="drop-descr-collapse-"+item.collapse_attr)
+                  .drop-descr-item__link-inner
+                    img(class="icon icon--"+item.icon src="static/i/general/svg/"+item.icon+".svg" alt=item.name)
+                    = item.name
+              .drop-descr-item__text.collapse(id="drop-descr-collapse-"+item.collapse_attr aria-labelledby="drop-descr-heading-"+item.collapse_attr data-parent="#drop-descr")
+                .drop-descr-item__text-inner
+                  != item.text

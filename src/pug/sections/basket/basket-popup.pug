@@ -1,0 +1,17 @@
+mixin basketPopup()
+	section.section.section--basket-popup(id="order-accepted" data-popup-modal)
+		.container
+			.basket-popup
+				.basket-popup__wrapper
+					.basket-popup__content
+						
+						.basket-popup__icon
+							img(src="static/i/general/svg/basket-popup.svg", alt="Basket")
+						.basket-popup__title
+							span Ваш заказ <br>принят
+						.basket-popup__icon
+							img(src="static/i/general/svg/italy.svg", alt="Italy")
+
+					.basket-popup__content
+						.basket-popup__button
+							a(href='catalog.html' data-popup="#order-accepted").basket-popup__button-catalog.btn.btn_theme_black.btn_size_m Перейти <br>в каталог

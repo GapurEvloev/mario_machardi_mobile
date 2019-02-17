@@ -1,0 +1,128 @@
+mixin goodSliderItem(items)
+	each item in items
+		.good-slider__item(data-popup='#good-popup-slider')
+			.good-slider__image
+				img(src=item.image alt=item.title)
+
+mixin good()
+	section.section.section--section-good
+		.container
+			.good
+				.good-wrapper
+					.good-slider.owl-carousel
+						+goodSliderItem([{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						},{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						},{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						},{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						}])
+					.good-descr
+						.good-descr__wrapper
+							
+							.good-descr__title
+								.good-descr__name Mario Machardi, 
+
+								.good-descr__properties
+
+									span.slim Slim Fit, 
+									span.non-iron NON IRON, 
+									span.sleeve Длинный рукав 
+							
+							.good-descr__list
+								.good-descr__list-item.good-descr__article Артикул: 
+									span.article SF300Skom САТИН 
+
+								.good-descr__list-item.good-descr__composition Состав: 
+									span.composition 100% хлопок 
+								
+								.good-descr__list-item.good-descr__price Цена: 
+									span.price 2990
+									span.rub  р
+
+								.good-descr__list-item.good-descr__quantity Количество:
+
+									.good-descr__quantity.quantity-sizes
+										.quantity-sizes__item
+											span.quantity-sizes__letter S
+											select#alphabet.quantity-sizes__select(name="quantity-sezes")
+												option(value="1") 1
+												option(value="2") 2
+												option(value="3") 3
+												option(value="4") 4
+												option(value="5") 5
+												
+										.quantity-sizes__item
+											span.quantity-sizes__letter M
+											select#alphabet.quantity-sizes__select(name="quantity-sezes")
+												option(value="1") 1
+												option(value="2") 2
+												option(value="3") 3
+												option(value="4") 4
+												option(value="5") 5
+												
+										.quantity-sizes__item
+											span.quantity-sizes__letter L
+											select#alphabet.quantity-sizes__select(name="quantity-sezes")
+												option(value="1") 1
+												option(value="2") 2
+												option(value="3") 3
+												option(value="4") 4
+												option(value="5") 5
+												
+										.quantity-sizes__item
+											span.quantity-sizes__letter XL
+											select#alphabet.quantity-sizes__select(name="quantity-sezes")
+												option(value="1") 1
+												option(value="2") 2
+												option(value="3") 3
+												option(value="4") 4
+												option(value="5") 5
+												
+										.quantity-sizes__item
+											span.quantity-sizes__letter 2XL
+											select#alphabet.quantity-sizes__select(name="quantity-sezes")
+												option(value="1") 1
+												option(value="2") 2
+												option(value="3") 3
+												option(value="4") 4
+												option(value="5") 5
+												
+										.quantity-sizes__item
+											span.quantity-sizes__letter 3XL
+											select#alphabet.quantity-sizes__select(name="quantity-sezes")
+												option(value="1") 1
+												option(value="2") 2
+												option(value="3") 3
+												option(value="4") 4
+												option(value="5") 5
+												
+					.good-button-basket
+						button.btn.btn_theme_black.btn_size_l(type="button" name="good-button-in-basket" data-popup="#add-basket") В корзину
+
+mixin goodAddedPopup()
+	section.section.section--good-added(id="add-basket" data-popup-modal)
+		.container
+			.basket-popup.good-added
+				.basket-popup__wrapper
+					.basket-popup__content
+						
+						.basket-popup__icon
+							img(src="static/i/general/svg/basket-popup.svg", alt="Basket")
+						.basket-popup__title
+							span Ваш товар<br>добавлен в корзину
+						.basket-popup__icon
+							img(src="static/i/general/svg/italy.svg", alt="Italy")
+
+					.basket-popup__content
+						.basket-popup__buttons
+							a(href="catalog.html").basket-popup__button-catalog.good-added__button.btn.btn_theme_black.btn_size_m ПРОДОЛЖИТЬ <br>ПОКУПКИ
+						
+							button(data-popup="#add-basket").basket-popup__button-catalog.good-added__button.btn.btn_theme_black.btn_size_m ПЕРЕЙТИ <br>В КОРЗИНУ
+

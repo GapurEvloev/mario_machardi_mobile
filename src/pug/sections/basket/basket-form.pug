@@ -1,0 +1,137 @@
+mixin basketForm()
+	//Оформление заказа / basket-form
+	section.section.section--basket-form
+		.container
+			.basket-forms-container#basket-forms
+
+				.basket-forms__open-button
+					button.btn.btn_theme_black.btn_size_l.collapsed(type="button" data-target="#basket-forms-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="basket-forms-collapse")
+						| Ввести личные данные
+
+				.basket-forms.collapse(id="basket-forms-collapse" aria-labelledby="basket-forms-heading" data-parent="#basket-forms")
+					.basket-forms__wrapper#basket-forms-form
+						
+						form.basket-forms__form(action='?' method='POST')
+
+							.basket-forms__title.global-blocks-title
+									span.global-blocks-title_text Личные данные
+
+							.basket-forms-group.personal-data
+
+								.basket-forms-group__item.personal-data__item.name
+									input.basket-forms-group__input.personal-data__input(type='text' name='name' data-validation='name')
+									label.basket-forms-group__label.personal-data__label Имя *
+
+								.basket-forms-group__item.personal-data__item.email
+									input.basket-forms-group__input.personal-data__input(type='text' name='email' data-validation='email')
+									label.basket-forms-group__label.personal-data__label Email *
+
+								.basket-forms-group__item.personal-data__item.phone
+									
+									input.basket-forms-group__input.personal-data__input(type='text' name='phone' data-validation='phone')
+									label.basket-forms-group__label.personal-data__label Телефон *
+
+							button.delivery-open-button.btn.btn_theme_black.btn_size_l.collapsed(type="button" data-target="#delivery-forms-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="delivery-forms-collapse") Доставка и&nbsp;оплата
+
+							.delivery-collapse.collapse(id="delivery-forms-collapse" aria-labelledby="delivery-forms-heading" data-parent="#basket-forms-form")
+								.basket-forms__title.global-blocks-title
+									span.global-blocks-title_text Доставка и&nbsp;оплата
+								.basket-forms-group.delivery#delivery
+									
+
+									.basket-forms-group__item.delivery__item.city
+										
+										input.basket-forms-group__input.delivery__input(type='text' name='city' data-validation='city')
+										label.basket-forms-group__label.delivery__label Город
+									
+									.basket-forms-group__item.delivery__item.comment
+										
+										textarea.basket-forms-group__textarea(name='address' rows='6')
+										label.basket-forms-group__label.delivery__label Адрес доставки
+												
+								.basket-forms-group.delivery-method
+
+									.basket-forms-group__title.delivery-method__title
+										span.method__title Способ доставки:  
+
+									.basket-forms-group__item.delivery-method__item
+										input(name="method" type="radio")#radio_1.delivery-method__input
+										label(for="radio_1").basket-forms-group__label.delivery-method__label По Москве (300 р)
+
+
+
+									.basket-forms-group__item.delivery-method__item
+										input(name="method" type="radio")#radio_2.delivery-method__input
+										label(for="radio_2").basket-forms-group__label.delivery-method__label Самовывоз из ПВЗ, ул. Верхняя Радищевская, 5 (100 р)
+
+
+
+									.basket-forms-group__item.delivery-method__item
+										input(name="method" type="radio")#radio_3.delivery-method__input
+										label(for="radio_3").basket-forms-group__label.delivery-method__label В другой город, курьерской службой ( по тарифу компании)
+
+								
+								.basket-forms-group.courier
+									.basket-forms-group__item.service
+										select#alphabet.service__select(name="service")
+											option(value="poni") Pony Express
+											option(value="gepard") Gepard
+											option(value="fattorino ") Fattorino
+
+								.basket-forms-group.delivery-method
+									
+									.basket-forms-group__title.pay-method__title
+										span.method__title Способ оплаты:
+
+									.basket-forms-group__item.pay-method__item
+										input(name="method_pay" type="radio")#radio_pay_1.pay-method__input
+										label(for="radio_pay_1").basket-forms-group__label.pay-method__label Оплата наличными при получении товара
+
+									.basket-forms-group__item.pay-method__item
+										input(name="method_pay" type="radio")#radio_pay_2.pay-method__input
+										label(for="radio_pay_2").basket-forms-group__label.pay-method__label Яндекс Касса
+							
+								button.registration-open-button.btn.btn_theme_black.btn_size_l.collapsed(type="button" data-target="#registration-forms-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="registration-forms-collapse") Оформление заказа
+
+								.registration-collapse.collapse(id="registration-forms-collapse" aria-labelledby="registration-forms-heading" data-parent="#delivery")
+									
+									.registration
+										.registration__title.global-blocks-title
+											span.global-blocks-title_text Оформление заказа
+
+										.registration-group
+											.registration-item
+												.registration-item__text Количество товаров
+												.registration-item__number 2
+											.registration-item
+												.registration-item__text Стоимость товаров
+												.registration-item__number 11 870
+													span.rub  р
+											.registration-item
+												.registration-item__text Стоимость доставки 
+												.registration-item__number 0
+													span.rub  р
+											.registration-item
+												.registration-item__text.sum Итого
+												.registration-item__number.sum 11 870
+													span.rub  р
+
+										.registration-group.basket-forms-group
+											.registration-method
+												.registration-method__text Способ доставки: 
+													span По Москве (300 р)
+												a(href="#").registration-method__link Изменить
+											.registration-method
+												.registration-method__text Способ оплаты: 
+													span  Оплата наличными при получении товара
+												a(href="#").registration-method__link Изменить
+											.basket-forms-group__item
+												textarea(name='reg_comment' rows='6' id='reg_comment').basket-forms-group__textarea.registration-comment
+												label(for="reg_comment").basket-forms-group__label Ваш комментарий к заказу
+							
+									button.form-button.btn.btn_theme_black.btn_size_l.collapsed(type="button" data-popup='#order-accepted') Оформить заказ
+	
+	+basketPopup()
+
+
+
