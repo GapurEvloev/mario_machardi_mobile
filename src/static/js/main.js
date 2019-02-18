@@ -160,6 +160,27 @@ $(function () {
       $(this).removeClass("has-content");
     }
   });  
+});
+
+$(function () {
+  $(".contacts__feedback-form_group input").val("");
+  $(".contacts__feedback-form_group textarea").val("");
+  
+  $(".contacts__feedback-form_group input").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });
+
+  $(".contacts__feedback-form_group textarea").focusout(function(){
+    if($(this).val() != ""){
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });  
 });   
 // JavaScript for label effects only end
 

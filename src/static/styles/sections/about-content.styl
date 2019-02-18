@@ -3,26 +3,65 @@
 	.section--about-content
 		font-size 18px
 		line-height 24px
-		padding 0 15px
+		margin-bottom 65px
+		
 		strong	
 			font-weight bold
 			display block	
+			
 		.about-section
-			.about-content__items
-				.about-content__item
+			.about-content
+
+				&__title
+					margin-bottom 30px
+				
+				&__item
+					padding 37px 10px 45px
+					background-color: #F9FBFC
+					margin-bottom 2px
+
 					&-title
 						font-size 18px
-						margin 50px auto
+						margin-bottom 50px
+					
 					&-text
 						font-size 14px
+						
+		&.section--about-first
+			padding: 0 10px
+						
+	.section--about-sertificates		
+		margin-bottom 0
+			
 		.about-sertificates
 			display flex
 			justify-content space-around
+			margin-top 36px
+			
+			&__item
+				flex-basis 45%
+				
+				img
+					max-width 100%
 			
 		.about-sertificates-title
-			margin 40px auto
+			// margin 40px auto
 			font-size 20px	
 
-
+	.section--banner
+		margin-bottom 20px
+		
+		.banner
+			position: relative
+			width 100%
+			height 252px
+			overflow: hidden
+			
+			img
+				position: absolute
+				right 0
+				top 0
+				width auto
+				height 100%
 
 

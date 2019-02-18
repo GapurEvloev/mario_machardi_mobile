@@ -1,60 +1,90 @@
-.section--technology-content
-	font-size 18px
-	line-height 24px
-	padding 0 15px
-	strong	
-		font-weight bold
-		display inline-block
-.technology-content
-	&__title
-		font-weight bold
-
-	&__list
-		.list
-			.list__item
-				font-size 14px
-				list-style-type disc	
-				list-style-position inside
-	&__text
-		strong
+.technology-container
+	.section--technology-banner
+		background-color: #F9FBFC
+	
+	.section--technology-content
+		font-size 18px
+		line-height 24px
+		
+		strong	
 			font-weight bold
-			margin 20px 0 40px 0
-	&__list-title
-		font-weight bold
-.technology-section
-	.technology-section-title
-		margin 40px auto	
-		.global-blocks-title_text
-			font-size 33px
-			font-weight: bold
-			line-height 30px	
-	.technology-banner
-		display -webkit-flex
-		display -moz-flex
-		display -ms-flex
-		display -o-flex
-		display flex
-		align-items center
-		text-align center
-		justify-content space-around
-		.technology-banner__text
-			margin-top 38px
-			font-size 13px
-			max-width: 135px
-	.list-icons
-		.list-icons__item
+			display inline-block
+			
+	.technology
+		&-content
+			padding 0 12px
+			
+			&__title
+				font-weight bold
+				margin-bottom 30px
+
+			&__list
+				.list
+					.list__item
+						font-size 14px
+						list-style-type disc	
+						list-style-position inside
+						
+			&__text
+				strong
+					font-weight bold
+				
+				p
+					margin-bottom 30px
+					
+			&__list-title
+				font-weight bold
+				margin-bottom 20px
+				
+	.technology-section
+		&-title
+			margin 30px auto 40px
+			
+			&.easy-care-title
+				margin 65px auto 50px
+			
+			.global-blocks-title_text
+				font-size 33px
+				font-weight: bold
+				line-height 30px	
+				
+		.technology-banner
 			display -webkit-flex
 			display -moz-flex
 			display -ms-flex
 			display -o-flex
 			display flex
 			align-items flex-start
-			margin-bottom 35px
-			.list-icons__icon
+			text-align center
+			justify-content space-around
+			padding 30px 0px 40px
+			
+			&__column
+				flex-basis 50%
+				max-width 155px
+			
+			&__text
+				margin-top 38px
+				font-size 14px
+				line-height 17px
+				
+		.list-icons
+			&__item
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				align-items flex-start
+				margin-bottom 35px
+			&__icon
 				margin-right 23px
-					
-.section--banner
-	.banner 
-		margin-bottom 40px
-		
+						
+	.section--banner 
+		margin 40px 0 70px
+				
+	.section--innovations
+		.innovations
+			margin-top 0
+			
 
