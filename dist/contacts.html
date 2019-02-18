@@ -98,6 +98,64 @@
           <h2 class="page-title">Контакты</h2>
         </div>
       </section>
+      <section class="section section--shops">
+        <div class="container">
+          <div class="shops">
+            <div class="shops__info-shop" id="drop-descr">
+              <div class="shops__info-shop_column">
+                <div class="shops__info-shop_item" id="falsemap_111">
+                  <div class="shops__info-shop_wrapper" id="drop-descr-collapse-map_111">
+                    <div class="shops__info-shop_map" id="map_111" style="width: 100%; height: 330px"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        var exampleStructureObjMap = {
+          // Сюда нужно вывести координаты к которым будет центрирована карта
+          center: [55.76, 37.64],
+          // Сюда вывести размер зума
+          zoom: 8,
+          map_data: {
+            type: 'FeatureCollection',
+            features: [
+              {
+                type: 'Feature',
+                id: 0,
+                // Здесь нужно в параметр 'coordinates' подставить координаты
+                geometry: {type: 'Point', coordinates: [55.831903, 37.411961]},
+                properties: {
+                  // Здесь нужно в параметр 'balloonContent', 'clusterCaption', 'hintContent'
+                  // Подставить данные которые будут выводиться при ховере и клике на метку
+                  balloonContent: 'Содержимое балуна',
+                  clusterCaption: 'Еще одна метка',
+                  hintContent: 'Текст подсказки'
+                }
+              },
+              {
+                type: 'Feature',
+                id: 1,
+                // Здесь нужно в параметр 'coordinates' подставить координаты
+                geometry: {type: 'Point', coordinates: [55.763338, 37.565466]},
+                properties: {
+                  // Здесь нужно в параметр 'balloonContent', 'clusterCaption', 'hintContent'
+                  // Подставить данные которые будут выводиться при ховере и клике на метку
+                  balloonContent: 'Содержимое балуна',
+                  clusterCaption: 'Еще одна метка',
+                  hintContent: 'Текст подсказки'
+                }
+              }
+            ]
+          }
+        };
+        
+        var mapsData = {
+          map_111: exampleStructureObjMap,
+        };
+      </script>
     </div>
   </main>
   <!--Footer-->

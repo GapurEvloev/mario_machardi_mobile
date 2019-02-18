@@ -1,0 +1,57 @@
+mixin mapContacts(options)
+  .shops__info-shop_item(id=!"drop-descr-heading-"+options.idMap)
+    .shops__info-shop_wrapper(id="drop-descr-collapse-"+options.idMap)
+      .shops__info-shop_map(id=options.idMap style='width: 100%; height: 330px')
+
+
+mixin map()
+  section.section.section--shops
+    .container
+      .shops
+        .shops__info-shop#drop-descr
+
+          .shops__info-shop_column
+            +mapContacts({idMap: 'map_111'})
+
+  script.
+    var exampleStructureObjMap = {
+      // Сюда нужно вывести координаты к которым будет центрирована карта
+      center: [55.76, 37.64],
+      // Сюда вывести размер зума
+      zoom: 8,
+      map_data: {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            id: 0,
+            // Здесь нужно в параметр 'coordinates' подставить координаты
+            geometry: {type: 'Point', coordinates: [55.831903, 37.411961]},
+            properties: {
+              // Здесь нужно в параметр 'balloonContent', 'clusterCaption', 'hintContent'
+              // Подставить данные которые будут выводиться при ховере и клике на метку
+              balloonContent: 'Содержимое балуна',
+              clusterCaption: 'Еще одна метка',
+              hintContent: 'Текст подсказки'
+            }
+          },
+          {
+            type: 'Feature',
+            id: 1,
+            // Здесь нужно в параметр 'coordinates' подставить координаты
+            geometry: {type: 'Point', coordinates: [55.763338, 37.565466]},
+            properties: {
+              // Здесь нужно в параметр 'balloonContent', 'clusterCaption', 'hintContent'
+              // Подставить данные которые будут выводиться при ховере и клике на метку
+              balloonContent: 'Содержимое балуна',
+              clusterCaption: 'Еще одна метка',
+              hintContent: 'Текст подсказки'
+            }
+          }
+        ]
+      }
+    };
+
+    var mapsData = {
+      map_111: exampleStructureObjMap,
+    };
