@@ -5,6 +5,7 @@
   &-slider
     margin-top 15px
     position: relative
+    margin-bottom 10px
     
     .owl-nav
       position: absolute
@@ -53,6 +54,27 @@
       margin 0 auto 15px
       max-width 170px
       overflow hidden
+      position: relative
+      
+      .stock
+        background-color #C42B3C
+        border-radius 50%
+        color $white
+        height 49px
+        width 49px
+        position: absolute
+        top 0
+        left 0
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        align-items center
+        justify-content center
+        font-weight: bold
+        font-size 10px
+        text-transform uppercase
 
       & img
         display inline-block
@@ -123,6 +145,9 @@
         
         .select-styled
           text-indent -5px
+          
+        .select-options
+          transform: translateY(-1px);  
     
     &__letter
       width 40%

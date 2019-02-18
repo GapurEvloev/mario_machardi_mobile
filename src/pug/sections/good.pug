@@ -3,8 +3,10 @@ mixin goodSliderItem(items)
 		.good-slider__item(data-popup='#good-popup-slider')
 			.good-slider__image
 				img(src=item.image alt=item.title)
+				span.stock Акция 
 
 mixin good()
+	//sssection good
 	section.section.section--section-good
 		.container
 			.good
@@ -107,6 +109,7 @@ mixin good()
 						button.btn.btn_theme_black.btn_size_l(type="button" name="good-button-in-basket" data-popup="#add-basket") В корзину
 
 mixin goodAddedPopup()
+	//Good added popup
 	section.section.section--good-added(id="add-basket" data-popup-modal)
 		.container
 			.basket-popup.good-added
@@ -125,4 +128,23 @@ mixin goodAddedPopup()
 							a(href="catalog.html").basket-popup__button-catalog.good-added__button.btn.btn_theme_black.btn_size_m ПРОДОЛЖИТЬ <br>ПОКУПКИ
 						
 							button(data-popup="#add-basket").basket-popup__button-catalog.good-added__button.btn.btn_theme_black.btn_size_m ПЕРЕЙТИ <br>В КОРЗИНУ
+
+mixin sliderPopup()
+	section.section.section--slider-popup(id="good-popup-slider" data-popup-modal)
+		.container
+			.good-slider-popup
+				.good-slider.owl-carousel
+					+goodSliderItem([{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						},{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						},{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						},{
+							image: 'static/i/content/products/img_57.jpg',
+							title: 'Mario Machardi, Slim Fit, NON IRON'
+						}])
 

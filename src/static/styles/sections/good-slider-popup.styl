@@ -1,0 +1,31 @@
+.section--slider-popup
+	display: none
+	
+	&.popup-open
+		display: flex
+		position fixed
+		top 0
+		left 0
+		background-color #fff
+		z-index 15
+		height 100vh
+		width 100vw
+		align-items center
+	
+		.good-slider-popup
+			.good-slider
+				&__image
+					max-width 100%
+					
+					.stock
+						display: none
+					
+					img
+						width 90%
+				
+				.owl-nav
+					button
+						top 50%
+						transform translateY(55%)
+			//
+			
