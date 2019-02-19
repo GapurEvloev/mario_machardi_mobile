@@ -1,7 +1,18 @@
-mixin wholesale-buyers()
+mixin wholesale-buyers2()
   // Оптовым покупателям
   section.section.section--wholesale
     .wholesale
+        .wholesale-good
+          .container
+            .wholesale-good__title
+              | Сорочки.
+              strong Оптовые цены.
+            .wholesale-good__img
+              img(src="static/i/content/wholesale/shirt.png", alt="Сорочки") 
+            
+            .wholesale-good__text
+              p C 1992 года бренд «Mario Machardi» представлен и на российском рынке. Благодаря изысканному сочетанию классических и современных тенденций мировой моды, бескомпромиссному качеству, уникальному дизайну и инновационным технологиям обработки тканей, продукция «Mario Machardi» получила широкое признание покупателей и сегодня, новые коллекции сорочек, галстуков и аксессуаров можно приобрести в сети магазинов и фирменных точках продаж «Mario Machardi» уже по всей России.
+
         .wholesale-section
           .container  
             .wholesale-section__wrapper  
@@ -31,22 +42,24 @@ mixin wholesale-buyers()
                 img(src="static/i/general/svg/location-icon.svg", alt="Локация")
 
         .wholesale-section.wholesale-section--mod
-          .container  
+           
             .wholesale-section__wrapper  
-              .wholesale-section__text
-                | Доставка. 
-                strong Москва. Область.
-                strong Вся Россия
+              .container  
+                .wholesale-section__text
+                  | Доставка. 
+                  strong Москва. Область.
+                  strong Вся Россия
 
               .wholesale-section__img.wholesale-map-img
                 img(src="static/i/content/wholesale/wholesale-map.png", alt="Доставка") 
 
         .wholesale-section.wholesale-section--mod
-          .container  
-            .wholesale-section__wrapper  
-              .wholesale-section__text
-                | Планирование сезона поставок. 
-                strong Прибыль круглый год!
+          
+            .wholesale-section__wrapper 
+              .container   
+                .wholesale-section__text
+                  | Планирование сезона поставок. 
+                  strong Прибыль круглый год!
               .wholesale-section__img.wholesale-table-img
                 img(src="static/i/content/wholesale/wholesale-table.jpg", alt="Планирование")
             
