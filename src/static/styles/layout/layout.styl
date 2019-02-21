@@ -75,7 +75,28 @@ html
 
   @media (min-width: $grid-xxl)
     font-size: 20px                                // 5
-
+  
+  &.ovh
+    overflow hidden
+    -webkit-overflow-scrolling: auto
+    -webkit-overflow: auto
+    overscroll-behavior: none
+    position: fixed
+    top 0
+    width 100%
+    height 100%
+    margin: 0
+    
+    body
+      overflow hidden
+      overscroll-behavior: none
+      -webkit-overflow-scrolling: auto
+      position: fixed
+      top 0
+      width 100%
+      height 100%
+      margin: 0
+    
 // Set 100% line-height
 body
   font-size 100%

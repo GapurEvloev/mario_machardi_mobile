@@ -1,0 +1,71 @@
+extends ../layout/main
+
+block variables
+	- var title = "Mario Machardi"
+
+block content
+	.footer-popup-form.footer-popup-form--signup(id='popup-signup' data-popup-modal)
+		.footer-popup-form__title
+		.footer-popup-form__title
+			span 
+				| Зарегистрироваться 
+			| или
+			.footer-popup-form__title_link(data-popup='#popup-signin') 
+				| войти
+
+		.footer-popup-form__wrapper
+			form.footer-popup-form__form(action='?' method='POST')
+				.footer-popup-form__form_column
+
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='email' name='email' data-validation='email')
+						label.footer-popup-form__form_label
+							| Email
+
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='fio' data-validation='required')
+						label.footer-popup-form__form_label
+							| ФИО
+
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='org' data-validation='required')
+						label.footer-popup-form__form_label
+							| Организация
+
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='address' data-validation='required')
+						label.footer-popup-form__form_label
+							| Адрес магазина
+
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='text' name='city' data-validation='required')
+						label.footer-popup-form__form_label
+							| Город
+					
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='tel' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
+						label.footer-popup-form__form_label
+							| Телефон
+					
+					// TODO: чтобы Подтверждение пароля работало исправно, в поле 'data-validation-confirm'
+					// должно быть name от input, то есть pass_validate
+					.footer-popup-form__form_group.footer-popup-form__form_input
+						input.footer-popup-form__form_field(type='password' name='pass_validate' data-validation='length' data-validation-length='min6')
+						label.footer-popup-form__form_label.footer-popup-form__form_label--fix-top
+							| Пароль
+							span.footer-popup-form__form_label-help
+								br
+								| ( не менее 6 символов )
+					
+					.footer-popup-form__form_group.footer-popup-form__form_input.last-input
+						input.footer-popup-form__form_field(type='password' name='password_confirmation' data-validation='confirmation length' data-validation-confirm='pass_validate' data-validation-length='min6')
+						label.footer-popup-form__form_label
+							| Подтверждение пароля
+			
+					.footer-popup-form__form_group
+						.footer-popup-form__form_subfield-text
+							| Все поля обязательны для заполнения.
+			
+					.footer-popup-form__form_group.footer-popup-form__form_submit
+						button.btn.btn_theme_black.btn_size_l(type='submit')
+							| Регистрация

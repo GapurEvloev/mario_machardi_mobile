@@ -11,7 +11,7 @@ mixin personal-account(authorized, adminAccount)
 						| Войти
 				li.personal-account__bottom_item
 					img(src="static/i/general/svg/basket.svg", alt="Корзина")
-					a.personal-account__bottom_link(href='/basket.html')
+					a.personal-account__bottom_link(href='basket.html')
 						
 						| Корзина
 				li.personal-account__bottom_item(data-popup='#popup-request-call')
@@ -100,7 +100,7 @@ mixin personal-account(authorized, adminAccount)
 				.footer-popup-form__form_column
 
 					.footer-popup-form__form_group.footer-popup-form__form_input
-						input.footer-popup-form__form_field(type='text' name='email' data-validation='email')
+						input.footer-popup-form__form_field(type='email' name='email' data-validation='email')
 						label.footer-popup-form__form_label
 							| Email
 
@@ -125,7 +125,7 @@ mixin personal-account(authorized, adminAccount)
 							| Город
 					
 					.footer-popup-form__form_group.footer-popup-form__form_input
-						input.footer-popup-form__form_field(type='text' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
+						input.footer-popup-form__form_field(type='tel' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
 						label.footer-popup-form__form_label
 							| Телефон
 					
@@ -166,7 +166,7 @@ mixin personal-account(authorized, adminAccount)
 
 				.footer-popup-form__form_column
 					.footer-popup-form__form_group.footer-popup-form__form_input.last-input
-						input.footer-popup-form__form_field(type='text' name='email'
+						input.footer-popup-form__form_field(type='email' name='email'
 						data-validation='email')
 						label.footer-popup-form__form_label
 							| Email
@@ -186,12 +186,12 @@ mixin personal-account(authorized, adminAccount)
 
 				.footer-popup-form__form_column
 					.footer-popup-form__form_group.footer-popup-form__form_input
-						input.footer-popup-form__form_field(type='text' name='email' data-validation='email')
+						input.footer-popup-form__form_field(type='email' name='email' data-validation='email')
 						label.footer-popup-form__form_label
 							| ФИО
 					
 					.footer-popup-form__form_group.footer-popup-form__form_input
-						input.footer-popup-form__form_field(type='text' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
+						input.footer-popup-form__form_field(type='tel' name='phone-number' data-validation='length number' data-validation-length='10-11' data-validation-ignore='+')
 						label.footer-popup-form__form_label
 							| Телефон
 

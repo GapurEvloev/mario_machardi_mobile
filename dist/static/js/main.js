@@ -16,6 +16,8 @@ $(document).ready(function() {
       margin:10,
       nav:false,
       dots: true,
+      smartSpeed:450,
+      slideSpeed: 300,
       responsive:{
         0:{
             items:1
@@ -36,6 +38,8 @@ $(document).ready(function() {
       margin:10,
       nav:true,
       dots: false,
+      smartSpeed:450,
+      slideSpeed: 300,
       responsive:{
         0:{
             items:1
@@ -56,6 +60,8 @@ $(document).ready(function() {
       margin:10,
       nav:true,
       dots: false,
+      smartSpeed:450,
+      slideSpeed: 300,
       responsive:{
         0:{
             items:1
@@ -76,6 +82,8 @@ $(document).ready(function() {
       margin:10,
       nav:true,
       dots: false,
+      smartSpeed:450,
+      slideSpeed: 300,
       responsive:{
         0:{
             items:1
@@ -116,7 +124,7 @@ $(function () {
     $('[pause-audio]').toggleClass('show').toggleClass('hide');
   });
 });
-'use strict';
+
 // Script for audio end
 
 // JavaScript for label effects only start
@@ -207,6 +215,7 @@ $(function () {
 
         $('.popup-link-active').toggleClass('popup-link-active');
         $('.popup-open').toggleClass('popup-open');
+        $('.ovh').toggleClass('ovh');
         event.stopPropagation();
     });
 
@@ -214,11 +223,23 @@ $(function () {
         if (event.keyCode == 27) {
             $('.popup-link-active').toggleClass('popup-link-active');
             $('.popup-open').toggleClass('popup-open');
+            $('.ovh').toggleClass('ovh');
+        }
+    });
+
+    $('[data-popup]').on('click', function () {
+      var self = $(this),
+          idModal = self.attr('data-popup');
+      
+        $('.html').addClass('ovh');
+
+        if (!$(idModal).hasClass('popup-open')) {
+            $('.html').removeClass('ovh');
         }
     });
 
 });
-'use strict';
+
 // popup js end
 
 //Add div for popup bg start
@@ -257,58 +278,19 @@ $(function () {
     });
 });
 //shops map js
-
 //shop select js start
-$('select').each(function(){
-    var $this = $(this), numberOfOptions = $(this).children('option').length;
-  
-    $this.addClass('select-hidden'); 
-    $this.wrap('<div class="select"></div>');
-    $this.after('<div class="select-styled"></div>');
 
-    var $styledSelect = $this.next('div.select-styled');
-    $styledSelect.text($this.children('option').eq(0).text());
-  
-    var $list = $('<ul />', {
-        'class': 'select-options'
-    }).insertAfter($styledSelect);
-  
-    for (var i = 0; i < numberOfOptions; i++) {
-        $('<li />', {
-            text: $this.children('option').eq(i).text(),
-            rel: $this.children('option').eq(i).val()
-        }).appendTo($list);
-    }
-  
-    var $listItems = $list.children('li');
-  
-    $styledSelect.click(function(e) {
-        e.stopPropagation();
-        $('div.select-styled.active').not(this).each(function(){
-            $(this).removeClass('active').next('ul.select-options').hide();
-        });
-        $(this).toggleClass('active').next('ul.select-options').toggle();
-    });
-  
-    $listItems.click(function(e) {
-        e.stopPropagation();
-        $styledSelect.text($(this).text()).removeClass('active');
-        $this.val($(this).attr('rel'));
-        $list.hide();
-        //console.log($this.val());
-    });
-  
-    $(document).click(function() {
-        $styledSelect.removeClass('active');
-        $list.hide();
-    });
-});
+for (let i = 2; i <= 15; i++) {
+  $('.quantity-sizes__select').append('<option value="'+i+'">'+i+'</option>'); 
+  $('.quantity').append('<option value="'+i+'">'+i+'</option>'); 
+}
+
 //shop select js end
 //shops js end
 
 //catalog filter start
 // popup js start
-'use strict';
+
 $(function () {
     var filterOpen = $('#choice-options-link');
         checkValue = $(".catalog-filter__checkbox_input").val();

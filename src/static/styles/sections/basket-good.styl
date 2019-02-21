@@ -50,7 +50,46 @@
 						font-weight bold	
 				
 				&__quantity
-					margin-top 5px	
+					margin-top 5px
+					width 130px
+					position: relative
+					
+					.quantity
+						&#alphabet
+							height 100%
+							max-height 100%
+							width 100%
+							background-color transparent
+							box-shadow none
+							padding 0 10px
+							border none
+							background-image: none;
+							-webkit-appearance: none;
+							appearance: none;
+							
+							&:focus
+								box-shadow inset 0px 0px 3px 1px rgba($blue .2)
+						
+						&-wrapper
+							height 40px
+							position: relative
+							border 1px solid $gray-200
+							border-radius 2px
+							background-color $formFill
+					
+					&:before
+						content ''
+						display: inline-block
+						z-index 1
+						position: absolute
+						right 10px
+						bottom 30%
+						width 10px
+						height 10px
+						border-top 2px solid $black
+						border-right 2px solid $black
+						border-radius 2px
+						transform rotate(135deg)translateX(50%)		
 					
 					span
 						color #ACACAC

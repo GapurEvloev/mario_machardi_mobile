@@ -23,12 +23,12 @@ mixin basketForm()
 									label.basket-forms-group__label.personal-data__label Имя *
 
 								.basket-forms-group__item.personal-data__item.email
-									input.basket-forms-group__input.personal-data__input(type='text' name='email' data-validation='email')
+									input.basket-forms-group__input.personal-data__input(type='email' name='email' data-validation='email')
 									label.basket-forms-group__label.personal-data__label Email *
 
 								.basket-forms-group__item.personal-data__item.phone
 									
-									input.basket-forms-group__input.personal-data__input(type='text' name='phone' data-validation='phone')
+									input.basket-forms-group__input.personal-data__input(type='tel' name='phone' data-validation='phone')
 									label.basket-forms-group__label.personal-data__label Телефон *
 
 							button.delivery-open-button.btn.btn_theme_black.btn_size_l.collapsed(type="button" data-target="#delivery-forms-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="delivery-forms-collapse") Доставка и&nbsp;оплата
@@ -52,10 +52,11 @@ mixin basketForm()
 								.basket-forms-group.delivery-method
 
 									.basket-forms-group__title.delivery-method__title
-										span.method__title Способ доставки:  
+										span.method__title
+											a(name="delivery-method") Способ доставки:  
 
 									.basket-forms-group__item.delivery-method__item
-										input(name="method" type="radio")#radio_1.delivery-method__input
+										input(name="method" type="radio" checked)#radio_1.delivery-method__input
 										label(for="radio_1").basket-forms-group__label.delivery-method__label По Москве (300 р)
 
 
@@ -81,10 +82,11 @@ mixin basketForm()
 								.basket-forms-group.delivery-method
 									
 									.basket-forms-group__title.pay-method__title
-										span.method__title Способ оплаты:
+										span.method__title 
+											a(name="pay-method-link") Способ оплаты:
 
 									.basket-forms-group__item.pay-method__item
-										input(name="method_pay" type="radio")#radio_pay_1.pay-method__input
+										input(name="method_pay" type="radio" checked)#radio_pay_1.pay-method__input
 										label(for="radio_pay_1").basket-forms-group__label.pay-method__label Оплата наличными при получении товара
 
 									.basket-forms-group__item.pay-method__item
@@ -120,11 +122,11 @@ mixin basketForm()
 											.registration-method
 												.registration-method__text Способ доставки: 
 													span По Москве (300 р)
-												a(href="#").registration-method__link Изменить
+												a(href="#delivery-method").registration-method__link Изменить
 											.registration-method
 												.registration-method__text Способ оплаты: 
 													span  Оплата наличными при получении товара
-												a(href="#").registration-method__link Изменить
+												a(href="#pay-method-link").registration-method__link Изменить
 											.basket-forms-group__item
 												textarea(name='reg_comment' rows='6' id='reg_comment').basket-forms-group__textarea.registration-comment
 												label(for="reg_comment").basket-forms-group__label Ваш комментарий к заказу

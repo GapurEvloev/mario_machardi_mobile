@@ -73,6 +73,7 @@
 		border-top: 1px solid $gray-100
 		transition none
 		left -50%
+		
 	&-form
 		height 78px
 		width 100%
@@ -86,25 +87,37 @@
 		position relative
 		padding-left: 25px;
 		padding-right: 25px;
-
-	&-input
-		border: 1px solid $gray-100
 		border-radius 2px
+		
+	&-input
+		border: none
+		border-radius 0
+		max-width 100%
 		width 100%
-		max-height 40px
-		background-color: $formFill
+		height 100%
+		background-color transparent
 		padding 9px 18px
-		font-size 1rem
+		
+		&-wrapper
+			position: relative
+			border: 1px solid $gray-100
+			border-radius 2px
+			width 100%
+			max-height 40px
+			background-color: $formFill
+			font-size 1rem
+			overflow: hidden
 		
 	&-icon
 		position: absolute
-		right 40px
+		right 28px
 		color: transparent
-		width 19px
-		height 19px
-		background-position center 1px
+		width 45px
+		height 30px
+		background-position center center
 		background-repeat: no-repeat
-		background-size: 99% 99%
+		background-size: 20px 19px
+		background-color $formFill
 	
 	&-button
 		background-color: #fff
@@ -114,7 +127,7 @@
 			position: absolute
 			top 1px
 			width 19px
-			height 19px
+			height 20px
 			object-fit scale-down
 			object-position: right
 
@@ -161,42 +174,30 @@
 	position: relative
 	transition all 0.15s ease-in-out
 	font-weight 400
+	
 	&:hover
 		font-weight 500
+		
 	&:after
-		transition all 0.15s ease-in-out
-		background-color: #fff;
-		border: 2px solid $black;
-		border-bottom: none;
-		border-left: none
-		content: '';
-		height: 10px;
-		left: calc(50% - 10px);
-		position: absolute;
-		-webkit-transform-origin: top left;
-		-ms-transform-origin: top left;
-		-o-transform-origin: top left;
-		transform-origin: top left;
-		-webkit-transform: rotate(-45deg)translateY(1px);
-		-ms-transform: rotate(-45deg)translateY(1px);
-		-o-transform: rotate(-45deg)translateY(1px);
-		transform: rotate(-45deg)translateY(1px);
-		width: 10px;
-		top 27px
-		z-index: 3;
 		display: none
+		content ''
+		position absolute
+		border: 7px solid transparent;
+		border-bottom:9px solid $black
+		left: 50%
+		top: 12px
+		transform translate(-50%)
 	
 	&:before
 		content ''
 		position absolute
-		height 3px
-		left: calc(50% - 10px);
-		transform: rotate(0deg)translateY(1px);
-		width: 20px;
-		background-color $white
-		top 31px
-		z-index: 4
-		display none
+		border: 7px solid transparent;
+		border-bottom: 9px solid $white
+		left: 50%
+		top: 15px
+		transform translate(-50%)
+		z-index 12
+		display: none
 		
 	@media(min-width: $grid-ix)
 		font-size 12px
@@ -247,6 +248,9 @@
 	color #000
 	font-weight 400	
 	padding 15px 0
+	
+	&.link-bold
+		font-weight: bold
 
 	@media (max-width: $grid-sm-max)
 		color #000

@@ -45,7 +45,8 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.6",
     "slick-carousel": "^1.8.1",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "sweetalert": "^2.1.2"
   },
   "browserslist": [
     ">0.25%",
