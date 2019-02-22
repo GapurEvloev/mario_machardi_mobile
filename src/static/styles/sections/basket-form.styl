@@ -63,6 +63,18 @@
 						background-image: none;
 						-webkit-appearance: none;
 						appearance: none;
+				
+				.help-block
+					display: none
+					color $red-remove
+					font-size 12px
+					line-height 22px
+					
+					&.form-error
+						display: inline-block
+						position: absolute
+						left 0
+						top 47px
 			
 			&__input	
 				width 100%
@@ -78,6 +90,10 @@
 				background-image: none;
 				-webkit-appearance: none;
 				appearance: none;
+				
+				&.form-error
+					border 1px solid $red-remove
+					
 			
 			&__label
 				width auto
@@ -175,6 +191,7 @@
 								text-align: center;
 								transition: all 250ms ease;
 								transform translateY(-50%)
+								
 		.registration
 			padding 0 5px
 

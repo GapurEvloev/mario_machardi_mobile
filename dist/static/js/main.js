@@ -239,7 +239,6 @@ $(function () {
     });
 
 });
-
 // popup js end
 
 //Add div for popup bg start

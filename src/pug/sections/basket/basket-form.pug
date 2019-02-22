@@ -19,18 +19,21 @@ mixin basketForm()
 							.basket-forms-group.personal-data
 
 								.basket-forms-group__item.personal-data__item.name
-									input.basket-forms-group__input.personal-data__input(type='text' name='name' data-validation='name')
+									input.basket-forms-group__input.personal-data__input.form-error(type='text' name='name' data-validation='name')
 									label.basket-forms-group__label.personal-data__label Имя *
+									span.help-block.form-error Обязательное поле для заполнения
 
 								.basket-forms-group__item.personal-data__item.email
 									input.basket-forms-group__input.personal-data__input(type='email' name='email' data-validation='email')
 									label.basket-forms-group__label.personal-data__label Email *
-
+									span.help-block Обязательное поле для заполнения
+						
 								.basket-forms-group__item.personal-data__item.phone
 									
 									input.basket-forms-group__input.personal-data__input(type='tel' name='phone' data-validation='phone')
 									label.basket-forms-group__label.personal-data__label Телефон *
-
+									span.help-block Обязательное поле для заполнения
+							
 							button.delivery-open-button.btn.btn_theme_black.btn_size_l.collapsed(type="button" data-target="#delivery-forms-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="delivery-forms-collapse") Доставка и&nbsp;оплата
 
 							.delivery-collapse.collapse(id="delivery-forms-collapse" aria-labelledby="delivery-forms-heading" data-parent="#basket-forms-form")
